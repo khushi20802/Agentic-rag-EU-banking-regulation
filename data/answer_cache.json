@@ -1,0 +1,468 @@
+{
+ "7dde80f1f3fcc7df": {
+  "question": "What should firms check when onboarding customers remotely by video?",
+  "answer": "**Checks firms should carry out when onboarding customers remotely by video**\n\n* **Quality of the video/audio feed** – The image and sound must be clear enough to allow an unambiguous verification of the customer’s identity and must be captured in a readable format[2].  \n\n* **Adequate lighting and timing** – Photographs or video recordings must be taken under sufficient lighting and at the moment the customer is performing the verification[3].  \n\n* **Liveness detection** – The solution should include liveness-detection checks (e.g., requiring the customer to perform a specific action or analysing the data automatically) to confirm that a real person is present[3].  \n\n* **Use of reliable technology** – Strong, reliable algorithms and robust technological systems must be employed for identity verification[3].  \n\n* **Up-to-date and sufficient information** – The data collected through the remote solution must be current and adequate to meet the applicable AML/CFT and customer-due-diligence requirements[2].  \n\n* **Employee involvement (attended solutions)**  \n  * An employee with sufficient knowledge of AML/CFT rules and security aspects must participate in the verification and be trained to detect and prevent deception techniques[1].  \n  * An interview guide defining the steps of the remote verification process and the employee’s actions should be developed[1].  \n\n* **Technical reliability** – The onboarding process must be stopped if technical shortcomings or unexpected connection interruptions are detected, and the process should be restarted or redirected to a face-to-face verification when evidence quality is insufficient[2][4].  ",
+  "citations": [
+   {
+    "n": 1,
+    "citation": "EBA/GL/2022/15, para 42, p.20",
+    "type": "passage",
+    "doc_id": "eba_gl_2022_15",
+    "reference": "EBA/GL/2022/15",
+    "language": "en",
+    "url": null,
+    "snippet": "42. Where credit and financial institutions use attended remote customer onboarding solutions in which the customer interacts with an employee to perform the verification process, they should: a) ensure that the quality of the image and audio is sufficient to allow the proper verification of the customer’s identity and that reliable technological systems are used; b) foresee the participation of an employee that has sufficient knowledge of the applicable AML/CFT regulation and security aspects of remote verification and who is sufficiently trained to anticipate and prevent the intentional or d"
+   },
+   {
+    "n": 2,
+    "citation": "EBA/GL/2022/15, para 24, p.16",
+    "type": "passage",
+    "doc_id": "eba_gl_2022_15",
+    "reference": "EBA/GL/2022/15",
+    "language": "en",
+    "url": null,
+    "snippet": "24. Credit and financial institutions should ensure that: a) the information obtained through the remote customer onboarding solution is up-to-date and adequate to meet the applicable legal and regulatory standards for initial customer due diligence; b) any images, video, sound and data are captured in a readable format and with sufficient quality so that the customer is unambiguously recognisable; c) the identification process does not continue if technical shortcomings or unexpected connection interruptions are detected."
+   },
+   {
+    "n": 3,
+    "citation": "EBA/GL/2022/15, para 41, p.19",
+    "type": "passage",
+    "doc_id": "eba_gl_2022_15",
+    "reference": "EBA/GL/2022/15",
+    "language": "en",
+    "url": null,
+    "snippet": "41. Where credit and financial institutions use unattended remote onboarding solutions, in which the customer does not interact with an employee to perform the verification process, they should: a) ensure that any photograph(s) or video is taken under adequate lighting conditions and that the required properties are captured with necessary clarity to allow the proper verification of the customer’s identity; b) ensure that any photograph(s) or video is taken at the time the customer is performing the verification process; c) perform liveness detection verifications, which may include procedures"
+   },
+   {
+    "n": 4,
+    "citation": "EBA/GL/2022/15, para 40, p.19",
+    "type": "passage",
+    "doc_id": "eba_gl_2022_15",
+    "reference": "EBA/GL/2022/15",
+    "language": "en",
+    "url": null,
+    "snippet": "40. In situations where the evidence provided is of insufficient quality resulting in ambiguity or uncertainty so that the performance of remote checks is affected, the individual remote customer onboarding process should be interrupted and restarted or redirected to a face-to-face verification."
+   }
+  ],
+  "trace": [
+   {
+    "step": 1,
+    "tool": "search_documents",
+    "args": {
+     "doc_ids": [
+      "eba_gl_2022_15"
+     ],
+     "language": "en",
+     "query": "video remote onboarding checks firms should check"
+    },
+    "result": "4 passages",
+    "sources": [
+     1,
+     2,
+     3,
+     4
+    ]
+   }
+  ],
+  "reflection": {
+   "checked": true,
+   "faithfulness": 1.0,
+   "claims": [],
+   "flags": [],
+   "note": null
+  },
+  "meta": {
+   "cached": false,
+   "tokens": 6163,
+   "seconds": 52.2,
+   "model": "openai/gpt-oss-120b",
+   "embedding_model": "voyage-4"
+  }
+ },
+ "81a0e037bd4afce6": {
+  "question": "What do AML documents issued after 2022 say about enhanced due diligence for high-risk customers?",
+  "answer": "**EBA – Guidelines amending the ML/TF Risk Factors Guidelines (2024)**  \n\n* When a business relationship or occasional transaction is assessed as having a higher risk, the credit-or-investment-type service provider (CASP) **must apply enhanced customer-due-diligence (EDD) measures** in line with Article 18 of Directive (EU) 2015/849 and the list set out in Title I of the Guidelines[3].  \n* The Guidelines give examples of the additional measures that may be required, such as:  \n  – Verifying the customer’s and the beneficial owner’s identity using **more than one reliable and independent source**[3].  \n  – Identifying and verifying the identity of majority shareholders or natural persons who can operate a crypto-asset account on the customer’s behalf[3].  \n* For relationships involving **high-risk non-EU countries**, CASPs should follow the guidance in Title I (i.e., the same EDD approach)[5].  \n* Paragraph 26 explicitly states that where the ML/TF risk assessment determines a **high level of risk**, the institution **should apply the EDD measures** laid down in Article 18 of the Fourth Anti-Money-Laundering Directive[6].  \n\n**BaFin – Auslegungs- und Anwendungshinweise zum Geldwäschegesetz (2025)**  \n\n* § 15 Abs. 3 Nr. 2 GwG defines a **minimum set of reinforced (enhanced) due-diligence obligations** for business relationships or transactions that involve a third country identified by the European Commission as high-risk. The exact scope may be expanded depending on the **individual risk level**[7].  \n* § 15 Abs. 2 GwG provides a **general clause**: whenever a higher risk of money-laundering or terrorist financing is identified (including cases not listed in § 15 Abs. 3), the obliged entity must determine and implement **appropriate enhanced due-diligence measures** based on its risk analysis[9].  \n* § 10 Abs. 2 Satz 3 GwG requires that, when assessing the risk and deciding on the **extent of enhanced due-diligence**, the entity must at least consider:  \n  – the purpose of the account or business relationship,  \n  – the amount of assets or transaction volume, and  \n  – the regularity or duration of the relationship[10].  \n\n**Summary** – Both post-2022 AML documents require that, for high-risk customers (e.g., those linked to high-risk third-countries, sectors, or crypto-asset services), institutions must move beyond standard CDD and apply **enhanced due-diligence measures**. The EBA guideline lists concrete verification steps, while the BaFin guidance ties the obligation to the statutory risk-based framework of §§ 10 and 15 GwG, allowing additional measures to be calibrated to the specific risk profile.",
+  "citations": [
+   {
+    "n": 3,
+    "citation": "EBA/GL/2024/01, para 21.12 (part 1), p.29",
+    "type": "passage",
+    "doc_id": "eba_gl_2024_01",
+    "reference": "EBA/GL/2024/01",
+    "language": "en",
+    "url": null,
+    "snippet": "21.12. Where the risk associated with a business relationship or occasional transaction is in-creased, CASPs have to apply enhanced CDD measures pursuant to Article 18 of Di-rective (EU) 2015/849 and as set out in Title I of these Guidelines. In addition, CASPs should apply relevant enhanced CDD measures enumerated in the list below, as neces-sary, depending on the risk exposure of the business relationship: a) Verify the customer’s and the beneficial owner’s identity on the basis of more than one reliable and independent source. b) Identify and verify the identity of majority shareholders tha"
+   },
+   {
+    "n": 5,
+    "citation": "EBA/GL/2024/01, para 21.14–21.15, p.31",
+    "type": "passage",
+    "doc_id": "eba_gl_2024_01",
+    "reference": "EBA/GL/2024/01",
+    "language": "en",
+    "url": null,
+    "snippet": "21.14. In respect of business relationships or transactions involving high-risk non-EU countries, CASPs should follow the guidance in Title I of these Guidelines. Simplified customer due diligence 21.15. In low-risk situations, which have been classified as such as a result of the ML/TF risk assessment carried out by the CASP in keeping with these Guidelines, and to the extent permitted by national legislation, CASPs may apply SDD measures, which may include: a) for customers subject to a statutory licensing and regulatory regime in the EU or in a non-EU country, verifying identity based on ev"
+   },
+   {
+    "n": 6,
+    "citation": "EBA/GL/2024/01, para 26, p.18",
+    "type": "passage",
+    "doc_id": "eba_gl_2024_01",
+    "reference": "EBA/GL/2024/01",
+    "language": "en",
+    "url": null,
+    "snippet": "26. Guideline 9.17 is replaced by the following: ‘9.17 Where a bank has determined, based on its ML/TF risk assessment carried out in keeping with these Guidelines, that the level of the ML/TF risk associated with the business relation-ship is high, it should apply the EDD measures set out in Article 18 of Directive (EU) 2015/849 as appropriate.’"
+   },
+   {
+    "n": 7,
+    "citation": "AuA GwG, 7.2 (part 1), p.73",
+    "type": "passage",
+    "doc_id": "bafin_aua_gwg",
+    "reference": "AuA GwG",
+    "language": "de",
+    "url": null,
+    "snippet": "7.2 Drittstaaten mit hohem Risiko, § 15 Abs. 3 Nr. 2 GwG und § 15 Abs. 5 und 5a GwG § 15 Abs. 5 GwG umschreibt ein Mindestmaß an verstärkten Sorgfaltspflichten, welches in den Fällen des § 15 Abs. 3 Nr. 2 GwG zu erfüllen ist. Je nach dem Grad des erhöhten Risikos im Einzelfall können auch weitere Sorgfaltspflichten erforderlich sein. In den Ziffern 4.53 ff. der Leitlinien zu Risikofaktoren finden sich zusätzliche Hinweise zum Umgang mit Hochrisikostaaten und zu möglichen zusätzlichen Sorgfaltspflichten. Ein höheres Risiko liegt gemäß § 15 Abs. 3 Nr. 2 GwG vor, wenn es sich um eine Geschäftsbez"
+   },
+   {
+    "n": 9,
+    "citation": "AuA GwG, 6.2 (part 3), p.71",
+    "type": "passage",
+    "doc_id": "bafin_aua_gwg",
+    "reference": "AuA GwG",
+    "language": "de",
+    "url": null,
+    "snippet": "ein höheres Risiko der Geldwäsche oder Terrorismusfinanzierung bestehen kann. Die Verpflichteten bestimmen den konkreten Umfang der zu ergreifenden Maßnahmen entsprechend dem jeweiligen höheren Risiko. Verstärkte Sorgfaltspflichten sind zusätzlich zu den allgemeinen Sorgfaltspflichten gemäß § 10 GwG zu erfüllen. Aufgrund der Bezugnahme auf § 10 Abs. 2 Satz 4 GwG müssen die Verpflichteten in der Lage sein, der BaFin bei Bedarf Rechenschaft über die Angemessenheit ihrer Maßnahmen ablegen zu können. § 15 Abs. 2 GwG stellt eine Generalklausel dar, die auch bei in § 15 Abs. 3 GwG nicht genannten Fa"
+   },
+   {
+    "n": 10,
+    "citation": "AuA GwG, 5.6 (part 2), p.66",
+    "type": "passage",
+    "doc_id": "bafin_aua_gwg",
+    "reference": "AuA GwG",
+    "language": "de",
+    "url": null,
+    "snippet": "Gemäß § 10 Abs. 2 Satz 3 GwG haben die Verpflichteten bei der Bewertung der Risiken darüber hinaus zumindest zu berücksichtigen: Nr. 1 den Zweck des Kontos oder der Geschäftsbeziehung, Nr. 2 die Höhe der von den Kunden eingezahlten Vermögenswerte oder den Umfang der ausgeführten Transaktionen sowie Nr. 3 die Regelmäßigkeit oder die Dauer der Geschäftsbeziehung. Die transaktionsbezogenen Sorgfaltspflichten gegenüber den Gelegenheitskunden umfassen die Identifizierung des Vertragspartners sowie ggf. die Abklärung des/der etwaigen wirtschaftlich Berechtigten. Die Überwachungspflicht nach § 10 Abs"
+   }
+  ],
+  "trace": [
+   {
+    "step": 1,
+    "tool": "query_documents",
+    "args": {
+     "date_from": "2023-01-01",
+     "topic": "aml"
+    },
+    "result": "2 documents",
+    "sources": [
+     1,
+     2
+    ]
+   },
+   {
+    "step": 2,
+    "tool": "search_documents",
+    "args": {
+     "doc_ids": [
+      "eba_gl_2024_01"
+     ],
+     "query": "enhanced due diligence high-risk customers"
+    },
+    "result": "4 passages",
+    "sources": [
+     3,
+     4,
+     5,
+     6
+    ]
+   },
+   {
+    "step": 3,
+    "tool": "search_documents",
+    "args": {
+     "doc_ids": [
+      "bafin_aua_gwg"
+     ],
+     "query": "erweiterte Sorgfaltspflicht Hochrisikokunden"
+    },
+    "result": "4 passages",
+    "sources": [
+     7,
+     8,
+     9,
+     10
+    ]
+   }
+  ],
+  "reflection": {
+   "checked": true,
+   "faithfulness": 0.9,
+   "claims": [],
+   "flags": [
+    {
+     "claim": "Both post‑2022 AML documents require that, for high‑risk customers (e.g., linked to high‑risk third‑countries, sectors, or crypto‑asset services), institutions must move beyond standard CDD and apply enhanced due‑diligence measures.",
+     "cited": [
+      3,
+      5,
+      6,
+      7,
+      9,
+      10
+     ],
+     "verdict": "partially_supported",
+     "reason": "The sources confirm EDD for high‑risk third‑countries and crypto‑asset cases, but do not explicitly mention ‘sectors’; the broader statement is a synthesis."
+    }
+   ],
+   "note": null
+  },
+  "meta": {
+   "cached": false,
+   "tokens": 13743,
+   "seconds": 73.3,
+   "model": "openai/gpt-oss-120b",
+   "embedding_model": "voyage-4"
+  }
+ },
+ "193f43f093cabe9f": {
+  "question": "How must the front office and back office be separated in lending under German rules?",
+  "answer": "Under the BaFin “Mindestanforderungen an das Risikomanagement” (Rundschreiben 06/2026) the **front office (Markt)** and **back office (Markt-Folge)** must be organised as separate units, and this separation must extend up to the level of senior management [1].  \n\nFor **risk-relevant credit decisions** the two units must each give an independent vote (the “two-vote principle”). Only when a loan is classified as non-risk-relevant, when the institution is very small and the management itself directly decides on the credit, or when the loan is initiated by a third party and the process is highly normed (e.g. housing-promotion loans), may a single vote be used [4].  \n\nIf a single-vote approach is chosen, the institution must still ensure that the overall credit-process requirements of the MaRisk are met [3].  \n\nAny waiver of the organisational separation must be **proportionate** to the size and complexity of the credit business and must be justified by the institution [1].",
+  "citations": [
+   {
+    "n": 1,
+    "citation": "Rundschreiben 06/2026 (BA), BTO 1.1 Tz. 1, p.42",
+    "type": "passage",
+    "doc_id": "bafin_rs_06_2026",
+    "reference": "Rundschreiben 06/2026 (BA)",
+    "language": "de",
+    "url": null,
+    "snippet": "BTO 1.1 Funktionstrennung und Votierung 1 Maßgeblicher Grundsatz für die Ausgestaltung der Prozesse im Kreditgeschäft ist die klare aufbauorganisatorische Trennung der Bereiche Markt und Marktfolge bis einschließlich der Ebene der Geschäftsleitung. Bei sehr kleinen Instituten kann auf die Votierung der beiden Bereiche verzichtet werden, wenn die Geschäftsleitung in die Vergabe risikorelevanter Kredite unmittelbar eingebunden wird und hierdurch eine ordnungsgemäße, den bestehenden Risiken angemessene Handhabung des Kreditgeschäfts sichergestellt bleibt. Insoweit müssen die Bearbeitung und die B"
+   },
+   {
+    "n": 3,
+    "citation": "Rundschreiben 06/2026 (BA), BTO 1.1 Tz. 4 (part 2), p.43",
+    "type": "passage",
+    "doc_id": "bafin_rs_06_2026",
+    "reference": "Rundschreiben 06/2026 (BA)",
+    "language": "de",
+    "url": null,
+    "snippet": "des Kunden als risikorelevant eingestuft wird. Abgrenzungen zwischen risikorelevantem und nicht-risikorelevantem Kreditgeschäft Die Abgrenzungen zwischen risikorelevantem und nicht-risikorelevantem Kreditgeschäft sind von jedem Institut eigenverantwortlich und unter Risikogesichtspunkten festzulegen. Zu den nicht risikorelevanten Kreditgeschäften dürfte z. B. regelmäßig das standardisierte Mengengeschäft zu rechnen sein. Initiierung durch Dritte Vereinfachungen im Hinblick auf die Funktionstrennung sind auch dann möglich, wenn es sich um Kreditgeschäfte handelt, die von Dritten initiiert wurde"
+   },
+   {
+    "n": 4,
+    "citation": "Rundschreiben 06/2026 (BA), BTO 1.1 Tz. 4 (part 1), p.43",
+    "type": "passage",
+    "doc_id": "bafin_rs_06_2026",
+    "reference": "Rundschreiben 06/2026 (BA)",
+    "language": "de",
+    "url": null,
+    "snippet": "4 Für Kreditentscheidungen bei Geschäften, die unter Risikogesichtspunkten als nicht wesentlich einzustufen sind, kann das Institut bestimmen, dass nur ein Votum erforderlich ist („nicht-risikorelevante Kreditgeschäfte“). Der Verzicht auf das zweite Votum ist auch dann möglich, wenn Kreditgeschäfte von Dritten initiiert werden. Insoweit ist die aufbauorganisatorische Trennung zwischen Markt und Marktfolge nur für Kreditgeschäfte maßgeblich, bei denen zwei Voten erforderlich sind. Falls ein zweites Votum nicht erforderlich ist, ist eine angemessene Umsetzung der Anforderungen an die Prozesse im"
+   }
+  ],
+  "trace": [
+   {
+    "step": 1,
+    "tool": "query_documents",
+    "args": {
+     "doc_type": "interpretation_guidance",
+     "issuer": "BaFin",
+     "language": "de",
+     "topic": "credit_risk"
+    },
+    "result": "0 documents",
+    "sources": []
+   },
+   {
+    "step": 2,
+    "tool": "search_documents",
+    "args": {
+     "doc_ids": [
+      "bafin_rs_06_2026"
+     ],
+     "language": "de",
+     "query": "Front Office Back Office Trennung Kreditgeschäft"
+    },
+    "result": "4 passages",
+    "sources": [
+     1,
+     2,
+     3,
+     4
+    ]
+   }
+  ],
+  "reflection": {
+   "checked": true,
+   "faithfulness": 1.0,
+   "claims": [],
+   "flags": [],
+   "note": null
+  },
+  "meta": {
+   "cached": false,
+   "tokens": 8164,
+   "seconds": 56.0,
+   "model": "openai/gpt-oss-120b",
+   "embedding_model": "voyage-4"
+  }
+ },
+ "377c009e01255491": {
+  "question": "What does MaRisk require for stress testing?",
+  "answer": "MaRisk (BaFin’s “Mindestanforderungen an das Risikomanagement”) sets the following requirements for stress testing:\n\n1. **Frequency and review** – Stress tests must be performed regularly and, at a minimum, annually; the adequacy of the tests and the underlying assumptions must be reviewed at regular intervals [1].\n\n2. **Scope of scenarios** – The tests must include appropriate **historical and hypothetical scenarios** that show the impact of a severe economic downturn (or a comparable stag-flation scenario) on the institution as a whole [2].  \n   *For small institutions* a single severe downturn scenario is generally sufficient, provided it negatively affects all material risk types; additional scenarios at the institution-wide level are not required [2].\n\n3. **Liquidity-risk stress testing** – For liquidity risk, stress tests must be carried out regularly and must consider both **institution-specific and market-wide causes**, as well as their combination. The institution must determine its expected survival horizon under the stress scenario [3].  \n   *For small institutions* only the scenario that regularly produces the largest impact (typically the combined institution-specific and market-wide cause) needs to be analysed [3].\n\n4. **Overall risk-profile testing** – Regular (and, where appropriate, ad-hoc) stress tests must also be performed for the **overall risk profile** of the institution. This requires defining **overarching scenarios** that capture the main internal and external risk drivers and that appropriately consider interactions between the major risk types [4].  \n   *Very small institutions* may forego risk-type-specific stress tests if the overall test already reflects a negative impact on those risks. Operational risk need not be stressed separately when adverse scenarios are already covered in the institution’s emergency-management procedures [4].\n\nThese provisions together ensure that institutions regularly assess their resilience to severe stress conditions, using scenarios that are relevant to their size and risk profile.",
+  "citations": [
+   {
+    "n": 1,
+    "citation": "Rundschreiben 06/2026 (BA), AT 4.3.3 Tz. 5, p.22",
+    "type": "passage",
+    "doc_id": "bafin_rs_06_2026",
+    "reference": "Rundschreiben 06/2026 (BA)",
+    "language": "de",
+    "url": null,
+    "snippet": "5 Die Angemessenheit der Stresstests und deren zugrunde liegende Annahmen sind in regelmäßigen Abständen, mindestens aber jährlich, zu überprüfen."
+   },
+   {
+    "n": 2,
+    "citation": "Rundschreiben 06/2026 (BA), AT 4.3.3 Tz. 3, p.21",
+    "type": "passage",
+    "doc_id": "bafin_rs_06_2026",
+    "reference": "Rundschreiben 06/2026 (BA)",
+    "language": "de",
+    "url": null,
+    "snippet": "3 Stresstests haben geeignete historische und hypothetische Szenarien darzustellen und ferner die Auswirkungen eines schweren konjunkturellen Abschwungs (oder eines vergleichbaren Stagflationsszenarios) auf Gesamtinstitutsebene zu analysieren. Für kleine Institute ist in der Regel ein schwerer konjunktureller Abschwung (oder ein vergleichbares Stagflationsszenario) als gesamtbankweites Szenario ausreichend, sofern darin alle wesentlichen Risiken negativ ausgelenkt werden. Darüberhinausgehende historische oder hypothetische Szenarien auf Gesamtbankebene sind nicht erforderlich."
+   },
+   {
+    "n": 3,
+    "citation": "Rundschreiben 06/2026 (BA), BTR 3 Tz. 6, p.74",
+    "type": "passage",
+    "doc_id": "bafin_rs_06_2026",
+    "reference": "Rundschreiben 06/2026 (BA)",
+    "language": "de",
+    "url": null,
+    "snippet": "6 Für Liquiditätsrisiken sind regelmäßig angemessene Stresstests durchzuführen. Dabei sind sowohl institutseigene als auch marktweite Ursachen für Liquiditätsrisiken in die Betrachtung einzubeziehen. Darüber hinaus sind beide Aspekte kombiniert zu betrachten. Das Institut muss in den Stressszenarien seinen voraussichtlichen Überlebenshorizont ermitteln. Erleichterung für kleine Institute Kleine Institute müssen nur jenes Szenario analysieren, das regelmäßig die größten Auswirkungen hat. Regelmäßig ist dies die Kombination aus institutseigenen und marktweiten Ursachen."
+   },
+   {
+    "n": 4,
+    "citation": "Rundschreiben 06/2026 (BA), AT 4.3.3 Tz. 2, p.21",
+    "type": "passage",
+    "doc_id": "bafin_rs_06_2026",
+    "reference": "Rundschreiben 06/2026 (BA)",
+    "language": "de",
+    "url": null,
+    "snippet": "2 Regelmäßige und ggf. anlassbezogene Stresstests sind auch für das Gesamtrisikoprofil des Instituts durchzuführen. Dafür sind geeignete übergeordnete Szenarien zu definieren, die wesentliche interne und externe Einflussfaktoren erfassen. Wechselwirkungen zwischen den wesentlichen Risikoarten sind angemessen zu berücksichtigen. Sehr kleine Institute können auf risikoartenspezifische Stresstests verzichten, sofern im Stresstest für das Gesamtrisikoprofil die betreffenden Risiken negativ beeinflusst werden. Das operationelle Risiko muss von sehr kleinen Instituten dann nicht gestresst werden, we"
+   }
+  ],
+  "trace": [
+   {
+    "step": 1,
+    "tool": "search_documents",
+    "args": {
+     "doc_ids": [
+      "bafin_rs_06_2026"
+     ],
+     "language": "de",
+     "query": "Stress test"
+    },
+    "result": "4 passages",
+    "sources": [
+     1,
+     2,
+     3,
+     4
+    ]
+   }
+  ],
+  "reflection": {
+   "checked": true,
+   "faithfulness": 1.0,
+   "claims": [
+    {
+     "claim": "Stress tests must be performed regularly and at least annually, with adequacy reviewed at regular intervals",
+     "cited": [
+      1
+     ],
+     "verdict": "supported",
+     "reason": "Source 1 explicitly requires annual review of stress tests and their assumptions."
+    },
+    {
+     "claim": "Tests must include appropriate historical and hypothetical scenarios showing the impact of a severe economic downturn or comparable stag‑flation scenario on the institution as a whole",
+     "cited": [
+      2
+     ],
+     "verdict": "supported",
+     "reason": "Source 2 states that stress tests must present suitable historical and hypothetical scenarios and analyse a severe downturn or stag‑flation at the institution level."
+    },
+    {
+     "claim": "For small institutions, a single severe downturn scenario is generally sufficient if it negatively affects all material risk types; additional scenarios are not required",
+     "cited": [
+      2
+     ],
+     "verdict": "supported",
+     "reason": "Source 2 specifies that for small institutes one severe downturn scenario is sufficient provided all essential risks are negatively impacted, and further scenarios are unnecessary."
+    },
+    {
+     "claim": "Liquidity‑risk stress tests must be carried out regularly and must consider both institution‑specific and market‑wide causes, as well as their combination",
+     "cited": [
+      3
+     ],
+     "verdict": "supported",
+     "reason": "Source 3 requires regular liquidity stress tests that include institution‑specific, market‑wide, and combined causes."
+    },
+    {
+     "claim": "The institution must determine its expected survival horizon under the stress scenario",
+     "cited": [
+      3
+     ],
+     "verdict": "supported",
+     "reason": "Source 3 mandates that the institute determine its anticipated survival horizon in the stress scenarios."
+    },
+    {
+     "claim": "For small institutions, only the scenario that regularly produces the largest impact (typically the combined institution‑specific and market‑wide cause) needs to be analysed",
+     "cited": [
+      3
+     ],
+     "verdict": "supported",
+     "reason": "Source 3 provides an exemption for small institutes to analyse only the scenario that most often yields the greatest impact, usually the combined cause."
+    },
+    {
+     "claim": "Regular (and, where appropriate, ad‑hoc) stress tests must also be performed for the overall risk profile of the institution",
+     "cited": [
+      4
+     ],
+     "verdict": "supported",
+     "reason": "Source 4 states that regular and possibly occasion‑based stress tests are required for the institution’s overall risk profile."
+    },
+    {
+     "claim": "Overall risk‑profile testing requires defining overarching scenarios that capture main internal and external risk drivers and consider interactions between major risk types",
+     "cited": [
+      4
+     ],
+     "verdict": "supported",
+     "reason": "Source 4 mandates defining suitable overarching scenarios that capture essential internal/external influences and interactions among risk types."
+    },
+    {
+     "claim": "Very small institutions may forego risk‑type‑specific stress tests if the overall test already reflects a negative impact on those risks",
+     "cited": [
+      4
+     ],
+     "verdict": "supported",
+     "reason": "Source 4 allows very small institutes to waive risk‑type‑specific tests when the overall stress test negatively affects those risks."
+    },
+    {
+     "claim": "Operational risk need not be stressed separately when adverse scenarios are already covered in the institution’s emergency‑management procedures",
+     "cited": [
+      4
+     ],
+     "verdict": "supported",
+     "reason": "Source 4 explicitly exempts very small institutes from separate operational‑risk stress testing if adverse scenarios are included in emergency management per AT 7.3 MaRisk."
+    }
+   ],
+   "flags": [],
+   "note": null
+  },
+  "meta": {
+   "cached": false,
+   "tokens": 6238,
+   "seconds": 6.8,
+   "model": "openai/gpt-oss-120b",
+   "embedding_model": "voyage-4"
+  }
+ }
+}

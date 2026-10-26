@@ -1,0 +1,1841 @@
+{
+  "C1": {
+    "question": "Which AML documents were issued after 2022?",
+    "category": "catalogue",
+    "answer": "The AML‑related documents that have been issued after 2022 are:\n\n| Document (ID) | Issuer | Title (English / German) | Publication date |\n|---------------|--------|---------------------------|-------------------|\n| **eba_gl_2024_01** | European Banking Authority (EBA) | *Guidelines amending the ML/TF Risk Factors Guidelines* | 16 January 2024[1] |\n| **bafin_aua_gwg** | Bundesanstalt für Finanzdienstleistungsaufsicht (BaFin) | *Auslegungs‑ und Anwendungshinweise zum Geldwäschegesetz* | 1 July 2025[2] |\n\nThese are the only AML‑topic documents in the catalogue with a publication date later than 31 December 2022.",
+    "trace": [
+      {
+        "step": 1,
+        "tool": "query_documents",
+        "args": {
+          "date_from": "2023-01-01",
+          "topic": "aml"
+        },
+        "result": "2 documents",
+        "sources": [
+          1,
+          2
+        ]
+      }
+    ],
+    "tools_used": [
+      "query_documents"
+    ],
+    "tool_calls": 1,
+    "routing_ok": true,
+    "cited_docs": [
+      "bafin_aua_gwg",
+      "eba_gl_2024_01"
+    ],
+    "expected_docs": [
+      "eba_gl_2024_01",
+      "bafin_aua_gwg"
+    ],
+    "faithfulness": 0.88,
+    "flags": [
+      {
+        "claim": "These are the only AML‑topic documents in the catalogue with a publication date later than 31 December 2022.",
+        "cited": [
+          1,
+          2
+        ],
+        "verdict": "unsupported",
+        "reason": "The sources list two entries but do not state that no other AML documents after 2022 exist."
+      }
+    ],
+    "sources": [
+      {
+        "n": 1,
+        "type": "catalogue",
+        "citation": "Catalogue entry: EBA/GL/2024/01",
+        "doc_id": "eba_gl_2024_01",
+        "reference": "EBA/GL/2024/01",
+        "url": null,
+        "text": "Guidelines amending the ML/TF Risk Factors Guidelines (EBA, en, 2024-01-16, topics: aml)"
+      },
+      {
+        "n": 2,
+        "type": "catalogue",
+        "citation": "Catalogue entry: AuA GwG",
+        "doc_id": "bafin_aua_gwg",
+        "reference": "AuA GwG",
+        "url": null,
+        "text": "Auslegungs- und Anwendungshinweise zum Geldwäschegesetz (BaFin, de, 2025-07-01, topics: aml)"
+      }
+    ],
+    "tokens": 4106,
+    "seconds": 4.8,
+    "run_at": "2026-10-21 12:54"
+  },
+  "C2": {
+    "question": "Which document amends the EBA ML/TF Risk Factors Guidelines (EBA/GL/2021/02), and when was it issued?",
+    "category": "catalogue",
+    "answer": "The **EBA Guidelines amending the ML/TF Risk Factors Guidelines** (document **EBA/GL/2024/01**, doc_id `eba_gl_2024_01`) amend the original **EBA ML/TF Risk Factors Guidelines (EBA/GL/2021/02)**. This amending document was issued on **16 January 2024**[1].",
+    "trace": [
+      {
+        "step": 1,
+        "tool": "query_documents",
+        "args": {
+          "issuer": "EBA",
+          "reference": "2024/01",
+          "topic": "aml"
+        },
+        "result": "1 documents",
+        "sources": [
+          1
+        ]
+      }
+    ],
+    "tools_used": [
+      "query_documents"
+    ],
+    "tool_calls": 1,
+    "routing_ok": true,
+    "cited_docs": [
+      "eba_gl_2024_01"
+    ],
+    "expected_docs": [
+      "eba_gl_2024_01"
+    ],
+    "faithfulness": 0.6,
+    "flags": [
+      {
+        "claim": "The amending document amends the original EBA ML/TF Risk Factors Guidelines (EBA/GL/2021/02)",
+        "cited": [
+          1
+        ],
+        "verdict": "partially_supported",
+        "reason": "The source says it amends the ML/TF Risk Factors Guidelines but does not specify the original's reference number"
+      },
+      {
+        "claim": "The original ML/TF Risk Factors Guidelines are EBA/GL/2021/02",
+        "cited": [
+          1
+        ],
+        "verdict": "unsupported",
+        "reason": "The source does not mention the original guideline's document number"
+      }
+    ],
+    "sources": [
+      {
+        "n": 1,
+        "type": "catalogue",
+        "citation": "Catalogue entry: EBA/GL/2024/01",
+        "doc_id": "eba_gl_2024_01",
+        "reference": "EBA/GL/2024/01",
+        "url": null,
+        "text": "Guidelines amending the ML/TF Risk Factors Guidelines (EBA, en, 2024-01-16, topics: aml)"
+      }
+    ],
+    "tokens": 3742,
+    "seconds": 3.7,
+    "run_at": "2026-10-21 12:54"
+  },
+  "C3": {
+    "question": "Which documents in the corpus are in German, and who issued them?",
+    "category": "catalogue",
+    "answer": "The German‑language documents in the corpus are:\n\n| Document (ID) | Title (German) | Issuer |\n|---------------|----------------|--------|\n| **bafin_aua_gwg** | Auslegungs‑ und Anwendungshinweise zum Geldwäschegesetz | BaFin |\n| **bafin_rs_06_2026** | Mindestanforderungen an das Risikomanagement (MaRisk) | BaFin |\n| **bafin_rs_14_2026** | Leitlinien zur Festlegung der Kriterien für die Ermittlung der Tätigkeiten gemäß Art. 4 Abs. 1 Nr. 18 CRR | BaFin |\n\nAll three German documents are issued by the German Federal Financial Supervisory Authority (BaFin)[1][2][3].",
+    "trace": [
+      {
+        "step": 1,
+        "tool": "query_documents",
+        "args": {
+          "language": "de"
+        },
+        "result": "3 documents",
+        "sources": [
+          1,
+          2,
+          3
+        ]
+      }
+    ],
+    "tools_used": [
+      "query_documents"
+    ],
+    "tool_calls": 1,
+    "routing_ok": true,
+    "cited_docs": [
+      "bafin_aua_gwg",
+      "bafin_rs_06_2026",
+      "bafin_rs_14_2026"
+    ],
+    "expected_docs": [
+      "bafin_rs_06_2026",
+      "bafin_aua_gwg",
+      "bafin_rs_14_2026"
+    ],
+    "faithfulness": 0.9,
+    "flags": [
+      {
+        "claim": "The corpus contains three German-language documents.",
+        "cited": [
+          1,
+          2,
+          3
+        ],
+        "verdict": "partially_supported",
+        "reason": "Sources list the three documents but do not explicitly state they are in the corpus."
+      }
+    ],
+    "sources": [
+      {
+        "n": 1,
+        "type": "catalogue",
+        "citation": "Catalogue entry: AuA GwG",
+        "doc_id": "bafin_aua_gwg",
+        "reference": "AuA GwG",
+        "url": null,
+        "text": "Auslegungs- und Anwendungshinweise zum Geldwäschegesetz (BaFin, de, 2025-07-01, topics: aml)"
+      },
+      {
+        "n": 2,
+        "type": "catalogue",
+        "citation": "Catalogue entry: Rundschreiben 06/2026 (BA)",
+        "doc_id": "bafin_rs_06_2026",
+        "reference": "Rundschreiben 06/2026 (BA)",
+        "url": null,
+        "text": "Mindestanforderungen an das Risikomanagement (MaRisk) (BaFin, de, 2026-06-30, topics: credit_risk, outsourcing, risk_management)"
+      },
+      {
+        "n": 3,
+        "type": "catalogue",
+        "citation": "Catalogue entry: Rundschreiben 14/2026 (BA)",
+        "doc_id": "bafin_rs_14_2026",
+        "reference": "Rundschreiben 14/2026 (BA)",
+        "url": null,
+        "text": "Leitlinien zur Festlegung der Kriterien für die Ermittlung der Tätigkeiten gemäß Art. 4 Abs. 1 Nr. 18 CRR (BaFin, de, 2026-10-05, topics: ancillary_services)"
+      }
+    ],
+    "tokens": 4758,
+    "seconds": 15.5,
+    "run_at": "2026-10-21 12:55"
+  },
+  "D1": {
+    "question": "What should firms check when onboarding customers remotely by video?",
+    "category": "content",
+    "answer": "When a firm uses a video‑based remote onboarding solution it must verify that the technical and procedural safeguards are sufficient to meet AML/CFT due‑diligence requirements.  The EBA Guidelines on the use of remote customer onboarding solutions (GL 2022/15) list the following checks:\n\n| Area | What the firm must check |\n|------|--------------------------|\n| **Data quality & completeness** | • The information collected remotely is up‑to‑date and adequate for initial customer due‑diligence [1].<br>• Images, video, sound and other data are captured in a readable format and with sufficient quality so the customer can be unambiguously identified [1]. |\n| **Technical reliability** | • The onboarding process is stopped if technical shortcomings or unexpected connection interruptions are detected [1]. |\n| **Capture conditions (unattended solutions)** | • Photographs or video are taken under adequate lighting and with the necessary clarity for identity verification [2].<br>• The media are captured at the moment the customer performs the verification [2]. |\n| **Liveness & anti‑spoofing** | • Liveness detection is performed, either by requiring a specific action from the customer or by analysing the data automatically [2]. |\n| **Algorithmic robustness** | • Strong, reliable algorithms are used to verify the authenticity of the photograph(s)/video [2]. |\n| **Attended solutions (employee present)** | • Image and audio quality are sufficient for proper identity verification and reliable technology is used [3].<br>• The employee conducting the verification has sufficient AML/CFT knowledge, is trained on security aspects of remote verification and can recognise and react to deception techniques [3].<br>• An interview guide is in place that defines the steps of the remote verification process and the employee’s actions [3]. |\n| **Fallback to face‑to‑face** | • If the evidence is of insufficient quality, creating ambiguity or uncertainty, the remote process must be interrupted and either restarted or redirected to a face‑to‑face verification [4]. |\n\nIn short, firms should check data adequacy, capture quality, technical stability, lighting and timing, liveness detection, algorithm strength, employee competence (for attended sessions), and have a clear fallback procedure when the video evidence is inadequate.",
+    "trace": [
+      {
+        "step": 1,
+        "tool": "search_documents",
+        "args": {
+          "doc_ids": [
+            "eba_gl_2022_15",
+            "bafin_aua_gwg"
+          ],
+          "query": "video onboarding checks remote customer onboarding video"
+        },
+        "result": "4 passages",
+        "sources": [
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    ],
+    "tools_used": [
+      "search_documents"
+    ],
+    "tool_calls": 1,
+    "routing_ok": true,
+    "cited_docs": [
+      "eba_gl_2022_15"
+    ],
+    "expected_docs": [
+      "eba_gl_2022_15"
+    ],
+    "faithfulness": 1.0,
+    "flags": [],
+    "sources": [
+      {
+        "n": 1,
+        "type": "passage",
+        "citation": "EBA/GL/2022/15, para 24, p.16",
+        "doc_id": "eba_gl_2022_15",
+        "reference": "EBA/GL/2022/15",
+        "language": "en",
+        "score": 0.525,
+        "text": "24. Credit and financial institutions should ensure that:\na) the information obtained through the remote customer onboarding solution is up-to-date and adequate to meet the applicable legal and regulatory standards for initial\ncustomer due diligence;\nb) any images, video, sound and data are captured in a readable format and with\nsufficient quality so that the customer is unambiguously recognisable;\nc) the identification process does not continue if technical shortcomings or unexpected\nconnection interruptions are detected."
+      },
+      {
+        "n": 2,
+        "type": "passage",
+        "citation": "EBA/GL/2022/15, para 41, p.19",
+        "doc_id": "eba_gl_2022_15",
+        "reference": "EBA/GL/2022/15",
+        "language": "en",
+        "score": 0.523,
+        "text": "41. Where credit and financial institutions use unattended remote onboarding solutions, in which\nthe customer does not interact with an employee to perform the verification process, they\nshould:\na) ensure that any photograph(s) or video is taken under adequate lighting conditions\nand that the required properties are captured with necessary clarity to allow the\nproper verification of the customer’s identity;\nb) ensure that any photograph(s) or video is taken at the time the customer is\nperforming the verification process;\nc) perform liveness detection verifications, which may include procedures where a\nspecific action from the customer is required to verify that he/she is present in the\ncommunication session or which can be based on the analysis of the received data\nand does not require a specific action by the customer;\nd) use strong and reliable algorithms to verify if the photograph(s) or video taken\nmatches the picture(s) retrieved from the official document(s) belonging to the\ncustomer."
+      },
+      {
+        "n": 3,
+        "type": "passage",
+        "citation": "EBA/GL/2022/15, para 42, p.20",
+        "doc_id": "eba_gl_2022_15",
+        "reference": "EBA/GL/2022/15",
+        "language": "en",
+        "score": 0.512,
+        "text": "42. Where credit and financial institutions use attended remote customer onboarding solutions\nin which the customer interacts with an employee to perform the verification process, they\nshould:\na) ensure that the quality of the image and audio is sufficient to allow the proper\nverification of the customer’s identity and that reliable technological systems are\nused;\nb) foresee the participation of an employee that has sufficient knowledge of the\napplicable AML/CFT regulation and security aspects of remote verification and who\nis sufficiently trained to anticipate and prevent the intentional or deliberate use of\ndeception techniques related to remote verification, and to detect and react in case\nof their occurrence;\nc) develop an interview guide defining the subsequent steps of the remote verification\nprocess as well as the actions required from the employee. The interview guide\nshould include guidance on observing and identifying psychological factors or other\nfeatures that might characterise suspicious behaviour during remote verification."
+      },
+      {
+        "n": 4,
+        "type": "passage",
+        "citation": "EBA/GL/2022/15, para 40, p.19",
+        "doc_id": "eba_gl_2022_15",
+        "reference": "EBA/GL/2022/15",
+        "language": "en",
+        "score": 0.509,
+        "text": "40. In situations where the evidence provided is of insufficient quality resulting in ambiguity or\nuncertainty so that the performance of remote checks is affected, the individual remote\ncustomer onboarding process should be interrupted and restarted or redirected to a face-to-face verification."
+      }
+    ],
+    "tokens": 6214,
+    "seconds": 49.4,
+    "run_at": "2026-10-21 12:56"
+  },
+  "D2": {
+    "question": "What information should institutions collect to assess the creditworthiness of a consumer borrower?",
+    "category": "content",
+    "answer": "Institutions should gather a set of verifiable data that covers the borrower’s ability and willingness to repay.  According to the EBA Guidelines on loan origination and monitoring (EBA/GL/2020/06), the credit‑worthiness assessment of a consumer must be based on at least the following information [1]:\n\n| Category | Typical data / evidence |\n|----------|--------------------------|\n| **Purpose of the loan** (when relevant) | Reason for borrowing, product‑specific purpose |\n| **Employment** | Status (full‑time, part‑time, contractor, self‑employed), sector, type of contract, duration of employment |\n| **Source of repayment capacity** | Income details, other regular cash‑flow sources (e.g., bonuses, commissions, overtime) |\n| **Household composition** | Number of dependents, marital status, family size |\n| **Financial commitments & expenses** | Existing debt obligations, regular out‑goings, living expenses |\n| **Regular expenses** | Ongoing costs that affect disposable income (e.g., utilities, insurance) |\n| **Collateral** (for secured lending) | Value and nature of assets pledged |\n| **Other risk mitigants** (e.g., guarantees) | Guarantees, co‑signers, insurance products, etc. |\n\nIf any of these items are not readily available, the institution must obtain them directly from the borrower or from third‑party sources, ensuring compliance with data‑protection rules (Regulation (EU) No 2016/679) [2]. All collected information should be documented and kept accessible for supervisory review throughout the life of the loan [3].",
+    "trace": [
+      {
+        "step": 1,
+        "tool": "search_documents",
+        "args": {
+          "doc_ids": [
+            "eba_gl_2020_06",
+            "eba_gl_2019_02",
+            "eba_gl_2021_02",
+            "eba_gl_2022_15",
+            "eba_gl_2024_01"
+          ],
+          "language": "en",
+          "query": "creditworthiness consumer borrower information collect"
+        },
+        "result": "4 passages",
+        "sources": [
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    ],
+    "tools_used": [
+      "search_documents"
+    ],
+    "tool_calls": 1,
+    "routing_ok": true,
+    "cited_docs": [
+      "eba_gl_2020_06"
+    ],
+    "expected_docs": [
+      "eba_gl_2020_06"
+    ],
+    "faithfulness": 0.4,
+    "flags": [
+      {
+        "claim": "Institutions should gather verifiable data covering the borrower’s ability and willingness to repay.",
+        "cited": [
+          1
+        ],
+        "verdict": "partially_supported",
+        "reason": "Source lists required information but does not explicitly mention \"willingness\"."
+      },
+      {
+        "claim": "Employment information must be collected, including status, sector, contract type and duration.",
+        "cited": [
+          1
+        ],
+        "verdict": "partially_supported",
+        "reason": "Source requires employment data but does not detail the specific elements."
+      },
+      {
+        "claim": "Source of repayment capacity must include income details and other regular cash‑flow sources such as bonuses or commissions.",
+        "cited": [
+          1
+        ],
+        "verdict": "partially_supported",
+        "reason": "Source mentions \"source of repayment capacity\" without the detailed examples."
+      },
+      {
+        "claim": "Household composition data includes number of dependents, marital status and family size.",
+        "cited": [
+          1
+        ],
+        "verdict": "partially_supported",
+        "reason": "Source requires household composition and dependents but does not specify marital status or family size."
+      },
+      {
+        "claim": "Financial commitments and expenses must be documented, covering existing debt obligations and living expenses.",
+        "cited": [
+          1
+        ],
+        "verdict": "partially_supported",
+        "reason": "Source lists financial commitments and expenses but does not enumerate the specific items."
+      },
+      {
+        "claim": "For secured lending, collateral information must include the value and nature of the pledged assets.",
+        "cited": [
+          1
+        ],
+        "verdict": "partially_supported",
+        "reason": "Source requires collateral for secured lending but does not detail value or nature."
+      }
+    ],
+    "sources": [
+      {
+        "n": 1,
+        "type": "passage",
+        "citation": "EBA/GL/2020/06, para 85, p.33",
+        "doc_id": "eba_gl_2020_06",
+        "reference": "EBA/GL/2020/06",
+        "language": "en",
+        "score": 0.565,
+        "text": "85. For the purposes of the creditworthiness assessment of consumers, institutions and creditors\nshould have available, and use, information supported by necessary and appropriate evidence,\nin relation to at least the following:\na.\npurpose of the loan, when relevant to the type of product;\nb.\nemployment;\nc.\nsource of repayment capacity;\nd.\ncomposition of a household and dependents;\ne.\nfinancial commitments and expenses for their servicing;\nf.\nregular expenses;\ng.\ncollateral (for secured lending);\nh.\nother risk mitigants, such as guarantees, when available.\nInstitutions and creditors can consider the use of specific information, data items and evidence\nset out in Annex 2."
+      },
+      {
+        "n": 2,
+        "type": "passage",
+        "citation": "EBA/GL/2020/06, para 88, p.34",
+        "doc_id": "eba_gl_2020_06",
+        "reference": "EBA/GL/2020/06",
+        "language": "en",
+        "score": 0.562,
+        "text": "88. If the information and data are not readily available, institutions and creditors should collect\nthe necessary information and data from the borrower and/or third parties, including relevant\ndatabases, when relevant. For the collection of information and data on the borrower from\nthird parties, institutions and creditors should ensure that the requirements of Regulation (EU)\nNo 2016/679 are met."
+      },
+      {
+        "n": 3,
+        "type": "passage",
+        "citation": "EBA/GL/2020/06, para 94, p.34",
+        "doc_id": "eba_gl_2020_06",
+        "reference": "EBA/GL/2020/06",
+        "language": "en",
+        "score": 0.562,
+        "text": "94. Institutions and creditors should document the information and data that lead to credit\napproval, including the actions and assessments carried out by them, and maintain this\ndocumentation in an accessible form (readily available for competent authorities) for at least\nthe duration of the loan agreement.\n5.2 Assessment of borrower’s creditworthiness\n5.2.1 General provisions for lending to consumers"
+      },
+      {
+        "n": 4,
+        "type": "passage",
+        "citation": "EBA/GL/2020/06, para 277 (part 5), p.67",
+        "doc_id": "eba_gl_2020_06",
+        "reference": "EBA/GL/2020/06",
+        "language": "en",
+        "score": 0.557,
+        "text": "automated models in credit granting, institutions and creditors may use other types/sources of\ninformation and data of an economic or financial nature that are necessary for the assessment, in\ncompliance\nwith\nthe\napplicable\nlegislation\nand\nin\nparticular\nDirective 2008/48/EC,\nDirective 2014/17/EU and Regulation (EU) 2016/679.\nA. Lending to consumers\n1. Evidence of identification\n2. Evidence of residence\n3. Where applicable, information on the purpose of the loan\n4. Where applicable, evidence of eligibility for the purposes of the loan\n5. Evidence of employment, including the type, sector, status (e.g. full-time, part-time, contractor,\nself-employed) and duration\n6. Evidence of income or other sources of repayment (including annual bonus, commission,\novertime, where applicable) covering a reasonable period, including payslips, current bank\naccount statements, and audited or professionally verified accounts (for self-employed\npersons)\n7. Information on financial assets and liabilities, e.g. savings account statements and loan\nstatements indicating outstanding loan balances\n8. Information on other financial commitments, such as child maintenance, education fees and\nalimonies, if relevant\n9. Information on household composition and dependants\n10. Evidence of tax status\n11. Where applicable, evidence of life insurance for the named borrowers\n12. Where applicable, data from credit registers or credit information bureaux or other relevant"
+      }
+    ],
+    "tokens": 6217,
+    "seconds": 24.6,
+    "run_at": "2026-10-21 12:56"
+  },
+  "D3": {
+    "question": "What must a written outsourcing agreement for a critical or important function contain under the EBA guidelines?",
+    "category": "content",
+    "answer": "Under the EBA Guidelines on outsourcing arrangements (EBA/GL/2019/02), a written outsourcing agreement for a **critical or important function** must include, at a minimum, the following elements:\n\n- **A clear description of the outsourced function** to be provided[1].  \n- **The start date and, where applicable, the end date of the agreement**, together with the notice periods for both the service provider and the institution/payment institution[1].  \n- **The governing law** of the agreement[1].  \n- **The parties’ financial obligations** (fees, penalties, etc.)[1].  \n- **Whether sub‑outsourcing of the critical or important function (or material parts thereof) is permitted**, and, if so, the conditions that apply (as set out in Section 13.1)[1].  \n- **The location(s) (regions or countries) where the function will be performed and/or where relevant data will be stored and processed**, including any required notifications to the institution/payment institution[1].  \n\nIn addition, the agreement should **specify whether sub‑outsourcing is permitted** (or not) for the function[2].",
+    "trace": [
+      {
+        "step": 1,
+        "tool": "search_documents",
+        "args": {
+          "doc_ids": [
+            "eba_gl_2019_02"
+          ],
+          "language": "en",
+          "query": "written outsourcing agreement critical important function contain"
+        },
+        "result": "4 passages",
+        "sources": [
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    ],
+    "tools_used": [
+      "search_documents"
+    ],
+    "tool_calls": 1,
+    "routing_ok": true,
+    "cited_docs": [
+      "eba_gl_2019_02"
+    ],
+    "expected_docs": [
+      "eba_gl_2019_02"
+    ],
+    "faithfulness": 0.14,
+    "flags": [
+      {
+        "claim": "A written outsourcing agreement for a critical or important function must include a clear description of the outsourced function",
+        "cited": [
+          1
+        ],
+        "verdict": "partially_supported",
+        "reason": "Source says the agreement should set out the description, not that it must"
+      },
+      {
+        "claim": "The agreement must include the start date and, where applicable, the end date together with notice periods for both the service provider and the institution/payment institution",
+        "cited": [
+          1
+        ],
+        "verdict": "partially_supported",
+        "reason": "Source uses \"should\" rather than \"must\" for these elements"
+      },
+      {
+        "claim": "The governing law of the agreement must be specified",
+        "cited": [
+          1
+        ],
+        "verdict": "partially_supported",
+        "reason": "Source recommends the governing law should be set out, not that it is mandatory"
+      },
+      {
+        "claim": "The parties’ financial obligations (fees, penalties, etc.) must be included",
+        "cited": [
+          1
+        ],
+        "verdict": "partially_supported",
+        "reason": "Source states the agreement should set out financial obligations, not that it must"
+      },
+      {
+        "claim": "The agreement must state whether sub‑outsourcing of the critical or important function (or material parts thereof) is permitted and, if so, the applicable conditions",
+        "cited": [
+          1
+        ],
+        "verdict": "partially_supported",
+        "reason": "Source uses \"should\" for this requirement, not a mandatory \"must\""
+      },
+      {
+        "claim": "The location(s) (regions or countries) where the function will be performed and/or where relevant data will be stored and processed must be specified, including any required notifications",
+        "cited": [
+          1
+        ],
+        "verdict": "partially_supported",
+        "reason": "Source says the agreement should set out locations and notification requirements, not that it must"
+      }
+    ],
+    "sources": [
+      {
+        "n": 1,
+        "type": "passage",
+        "citation": "EBA/GL/2019/02, para 75 (part 1), p.44",
+        "doc_id": "eba_gl_2019_02",
+        "reference": "EBA/GL/2019/02",
+        "language": "en",
+        "score": 0.649,
+        "text": "75. The outsourcing agreement for critical or important functions should set out at least:\na. a clear description of the outsourced function to be provided;\nb. the start date and end date, where applicable, of the agreement and the notice periods\nfor the service provider and the institution or payment institution;\nc. the governing law of the agreement;\nd. the parties’ financial obligations;\ne. whether the sub-outsourcing of a critical or important function, or material parts\nthereof, is permitted and, if so, the conditions specified in Section 13.1 that the sub-outsourcing is subject to;\nf. the location(s) (i.e. regions or countries) where the critical or important function will\nbe provided and/or where relevant data will be kept and processed, including the\npossible storage location, and the conditions to be met, including a requirement to\nnotify the institution or payment institution if the service provider proposes to change\nthe location(s);\ng. where relevant, provisions regarding the accessibility, availability, integrity, privacy and\nsafety of relevant data, as specified in Section 13.2;\nh. the right of the institution or payment institution to monitor the service provider’s\nperformance on an ongoing basis;\ni.\nthe agreed service levels, which should include precise quantitative and qualitative\nperformance targets for the outsourced function to allow for timely monitoring so that\nappropriate corrective action can be taken without undue delay if the agreed service"
+      },
+      {
+        "n": 2,
+        "type": "passage",
+        "citation": "EBA/GL/2019/02, para 76, p.45",
+        "doc_id": "eba_gl_2019_02",
+        "reference": "EBA/GL/2019/02",
+        "language": "en",
+        "score": 0.635,
+        "text": "76. The outsourcing agreement should specify whether or not sub-outsourcing of critical or\nimportant functions, or material parts thereof, is permitted."
+      },
+      {
+        "n": 3,
+        "type": "passage",
+        "citation": "EBA/GL/2019/02, para 78 (part 1), p.45",
+        "doc_id": "eba_gl_2019_02",
+        "reference": "EBA/GL/2019/02",
+        "language": "en",
+        "score": 0.624,
+        "text": "78. If sub-outsourcing of critical or important functions is permitted, the written agreement should:\na. specify any types of activities that are excluded from sub-outsourcing;\nb. specify the conditions to be complied with in the case of sub-outsourcing;\nc. specify that the service provider is obliged to oversee those services that it has sub-contracted to ensure that all contractual obligations between the service provider and\nthe institution or payment institution are continuously met;\nd. require the service provider to obtain prior specific or general written authorisation\nfrom the institution or payment institution before sub-outsourcing data;52"
+      },
+      {
+        "n": 4,
+        "type": "passage",
+        "citation": "EBA/GL/2019/02, para 70, p.43",
+        "doc_id": "eba_gl_2019_02",
+        "reference": "EBA/GL/2019/02",
+        "language": "en",
+        "score": 0.602,
+        "text": "70. With regard to critical and important functions, institutions and payment institutions should\nensure that the service provider has the business reputation, appropriate and sufficient\nabilities, the expertise, the capacity, the resources (e.g. human, IT, financial), the organisational\nstructure and, if applicable, the required regulatory authorisation(s) or registration(s) to\nperform the critical or important function in a reliable and professional manner to meet its\nobligations over the duration of the draft contract."
+      }
+    ],
+    "tokens": 5174,
+    "seconds": 40.0,
+    "run_at": "2026-10-21 12:57"
+  },
+  "D4": {
+    "question": "Wann gilt ein Kunde als politisch exponierte Person und welche Pflichten folgen daraus?",
+    "category": "content",
+    "answer": "**Wann gilt ein Kunde als politisch exponierte Person (PEP)**  \n\nEin Kunde (bzw. sein wirtschaftlich Berechtigter) gilt als politisch exponierte Person, wenn er nach § 1 Abs. 12 GwG – § 1 Abs. 14 GwG als  \n\n* eine PEP selbst,  \n* ein Familienmitglied einer PEP (§ 1 Abs. 13 GwG) oder  \n* eine ihm bekanntermaßen nahestehende Person (§ 1 Abs. 14 GwG)  \n\nidentifiziert wird[3].  \n\nDie Feststellung erfolgt im Rahmen der allgemeinen Sorgfaltspflichten nach § 10 Abs. 1 Nr. 4 GwG und muss mit einem risikoorientierten Verfahren für **alle** Vertragspartner durchgeführt werden[2].  \n\n---\n\n**Welche Pflichten ergeben sich daraus?**  \n\n1. **Erweiterte Sorgfaltspflichten**  \n   Sobald ein Kunde als PEP, Familienmitglied oder nahestehende Person eingestuft ist, greifen die nach § 15 GwG vorgeschriebenen verstärkten Sorgfaltspflichten (z. B. intensivere Identitätsprüfung, Herkunft des Vermögens, laufende Überwachung)[2].  \n\n2. **Übermittlungspflicht**  \n   Der Verpflichtete muss die nach § 10 Abs. 1 Nr. 4 GwG ermittelten Angaben über den PEP‑Status an die zuständige Behörde übermitteln. Zudem muss er auf Anfrage Kopien und Unterlagen, die zur Erfüllung der Sorgfaltspflichten erstellt wurden (z. B. Identifizierungsdokumente, Registerauszüge), bereitstellen und diese gemäß § 8 Abs. 4 GwG aufbewahren[1].  \n\n3. **Dokumentations‑ und Aufbewahrungspflicht**  \n   Alle Unterlagen, die im Zusammenhang mit der PEP‑Prüfung stehen, sind zu dokumentieren und für die gesetzlich vorgeschriebene Frist aufzubewahren (mindestens fünf Jahre)[1].  \n\n4. **Aktualisierung bei veränderten Umständen**  \n   Bei Änderungen der Kundenverhältnisse (z. B. neue Eigentümerstruktur) muss die PEP‑Prüfung erneut durchgeführt und ggf. die erweiterten Sorgfaltspflichten angepasst werden[4].  \n\nZusammengefasst: Ein Kunde gilt als PEP, wenn er selbst, ein Familienmitglied oder eine ihm nahestehende Person nach den genannten gesetzlichen Kriterien ist. Daraufhin sind erweiterte Sorgfaltspflichten, eine Meldung an die Aufsichtsbehörde, umfassende Dokumentations‑ und Aufbewahrungspflichten sowie eine regelmäßige Aktualisierung bei veränderten Umständen zu erfüllen.  ",
+    "trace": [
+      {
+        "step": 1,
+        "tool": "search_documents",
+        "args": {
+          "doc_ids": [
+            "bafin_aua_gwg"
+          ],
+          "language": "de",
+          "query": "politisch exponierte Person Kunde gilt als politisch exponierte Person Pflichten"
+        },
+        "result": "4 passages",
+        "sources": [
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    ],
+    "tools_used": [
+      "search_documents"
+    ],
+    "tool_calls": 1,
+    "routing_ok": true,
+    "cited_docs": [
+      "bafin_aua_gwg"
+    ],
+    "expected_docs": [
+      "bafin_aua_gwg"
+    ],
+    "faithfulness": 0.9,
+    "flags": [
+      {
+        "claim": "All documents related to the PEP assessment must be documented and retained for at least five years",
+        "cited": [
+          1
+        ],
+        "verdict": "partially_supported",
+        "reason": "Source 1 requires retention per §8 Abs.4 GwG, which sets a five‑year period, but the source does not state the exact duration"
+      }
+    ],
+    "sources": [
+      {
+        "n": 1,
+        "type": "passage",
+        "citation": "AuA GwG, 7.6 (part 4), p.76",
+        "doc_id": "bafin_aua_gwg",
+        "reference": "AuA GwG",
+        "language": "de",
+        "score": 0.602,
+        "text": "Die Übermittlungspflicht umfasst auch die gemäß § 10 Abs. 1 Nr. 4 GwG erlangten Angaben zur Feststellung,\nob es sich bei dem Vertragspartner oder wirtschaftlich Berechtigten um eine politisch exponierte Person oder\num ein Familienmitglied einer PeP oder um eine der PeP bekanntermaßen nahestehende Person handelt.\n\nIn Bezug auf die übertragene Pflicht muss der Verpflichtete außerdem gewährleisten, dass ihm auf Anfrage\nvon den Dritten oder anderen geeigneten Personen und Unternehmen aufbewahrte Kopien und Unterlagen,\ndie maßgeblich zur Durchführung der Sorgfaltspflichten herangezogen bzw. erstellt wurden, übermittelt\nwerden und dass die Unterlagen entsprechend der Frist des § 8 Abs. 4 GwG aufbewahrt werden. Bei diesen\nKopien und Unterlagen handelt es sich vor allem z.B. um Identifizierungsdokumente bezüglich des Vertragspartners oder Registerauszüge zur Ermittlung des wirtschaftlich Berechtigten. Hierzu zählen auch die\nVideoaufzeichnungen im Rahmen einer Videoidentifizierung entsprechend dem Rundschreiben 3/2017 (GW)\nvom 10.04.2017. Umfasst von der Übermittlungspflicht werden nunmehr aber auch maßgebliche Unterlagen\nzur Ermittlung von Zweck und Art der Geschäftsbeziehung und der Abklärung der Eigenschaft eines\nVertragspartners als politisch exponierte Person, Familienmitglied einer PeP oder einer PeP bekanntermaßen\nnahestehende Person.\n\nDie Übermittlung von Angaben und Informationen oder Unterlagen und Dokumenten darf nie durch den\nKunden erfolgen."
+      },
+      {
+        "n": 2,
+        "type": "passage",
+        "citation": "AuA GwG, 5.4 (part 1), p.60",
+        "doc_id": "bafin_aua_gwg",
+        "reference": "AuA GwG",
+        "language": "de",
+        "score": 0.586,
+        "text": "5.4 Abklärung des PeP-Status, § 10 Abs. 1 Nr. 4 GwG\nNach § 10 Abs. 1 Nr. 4 GwG zählt zu den allgemeinen Sorgfaltspflichten die Feststellung mit angemessenen,\nrisikoorientierten Verfahren, ob es sich bei dem Vertragspartner oder dem/der wirtschaftlich Berechtigten um\neine politisch exponierte Person (PeP), um ein Familienmitglied der PeP oder um eine der PeP\nbekanntermaßen nahestehende Person handelt.\nDie Abklärung des PeP-Status stellt keine verstärkte Sorgfaltspflicht dar, da sie gegenüber allen Kunden\ngleichermaßen zu erfolgen hat. Erst im Falle der Feststellung, dass es sich bei dem Vertragspartner des\nVerpflichteten oder bei dem/der wirtschaftlich Berechtigten um eine PeP, ein Familienmitglied oder um eine\nbekanntermaßen nahestehende Person handelt, greifen die verstärkten Sorgfaltspflichten gemäß § 15 GwG\n(zu den hiermit verbundenen Pflichten im Einzelnen siehe Kapitel 7.1).\nIn § 1 Abs. 12 GwG konkretisiert das Gesetz den Begriff der PeP. Eine PeP ist danach jede natürliche Person,\ndie ein hochrangiges wichtiges öffentliches Amt auf internationaler, europäischer oder nationaler Ebene oder\nein öffentliches Amt unterhalb der nationalen Ebene, dessen politische Bedeutung vergleichbar ist, ausübt\noder ausgeübt hat. Danach gelten insbesondere solche Personen als PePs, die von der Auflistung in\n§ 1 Abs. 12 Nr. 1 GwG erfasst sind oder die Ämter ausüben oder ausgeübt haben, welche in der von der"
+      },
+      {
+        "n": 3,
+        "type": "passage",
+        "citation": "AuA GwG, 7.1 (part 1), p.72",
+        "doc_id": "bafin_aua_gwg",
+        "reference": "AuA GwG",
+        "language": "de",
+        "score": 0.57,
+        "text": "7.1 Politisch exponierte Personen sowie deren Familienangehörige und ihnen\nbekanntermaßen nahestehende Personen, § 1 Abs. 12-14 i.V.m.\n§ 15 Abs. 3 Nr. 1, Abs. 4 GwG\nSoweit es sich bei einem Vertragspartner des Verpflichteten oder bei einem/einer wirtschaftlich Berechtigten\n(nicht bei einer für den Vertragspartner auftretenden Person!) um eine politisch exponierte Person (vgl.\n§ 1 Abs. 12 GwG), ein Familienmitglied einer solchen Person (§ 1 Abs. 13 GwG) oder eine ihr bekanntermaßen\nnahestehende Person (§ 1 Abs. 14 GwG) handelt, ist gemäß § 15 Abs. 3 Nr. 1 GwG generell von einem höheren\nRisiko auszugehen. Gleiches gilt für Versicherungsunternehmen im Sinne von § 2 Abs. 1 Nr. 7 GwG im Hinblick\nauf die vorgenannten Personen, die Bezugsberechtigte bzw. deren wirtschaftlich Berechtigte sind (vgl.\n§ 55 VAG). Eine solche Fallkonstellation bedeutet jedoch nicht, dass insofern keine Geschäftsbeziehungen, z.B.\nKontoführungen, erfolgen oder keine Transaktionen durchgeführt werden dürfen.\nFactoring-Geschäft:\n§ 25k Abs. 2 KWG – verstärkte Sorgfaltspflichten, hier:\nVerstärkte Sorgfaltspflichten im Zusammenhang mit Debitoren"
+      },
+      {
+        "n": 4,
+        "type": "passage",
+        "citation": "AuA GwG, 4.5, p.38",
+        "doc_id": "bafin_aua_gwg",
+        "reference": "AuA GwG",
+        "language": "de",
+        "score": 0.482,
+        "text": "4.5 Erneute Erfüllung von Kundensorgfaltspflichten bei Bestandskunden\nDie Regelung des § 10 Abs. 3a GwG stellt klar, dass die Erfüllung der allgemeinen Sorgfaltspflichten im Rahmen\nbereits bestehender Geschäftsbeziehungen u.a. bei Änderung maßgeblicher Umstände beim Kunden zu\naktualisieren oder zu ergänzen ist. Dies kann es im Einzelfall erforderlich machen, über die\nAktualisierungsverpflichtung gemäß § 10 Abs. 1 Nr. 5 GwG hinaus risikobasiert einzelne allgemeine\nSorgfaltspflichten gegenüber dem Kunden erneut auszuführen (Änderung Gesellschaftsform; Unternehmensverschmelzung; Bedeutende Änderung der Eigentums- und Kontrollstruktur etc.).\n5. Kundenbezogene Sorgfaltspflichten\nDie allgemeinen kundenbezogenen Sorgfaltspflichten ergeben sich aus den Nummern 1 bis 5 des\n§ 10 Abs. 1 GwG. Sie umfassen im Einzelnen:\n\nIdentifizierung des Vertragspartners einschließlich Erfassung der Vertretungsberechtigten bei jur.\nPersonen/Personenmehrheiten\n\nIdentifizierung der ggf. für den Vertragspartner auftretenden Person und Prüfung ihrer Berechtigung\nhierzu\n\nAbklärung des/der wirtschaftlich Berechtigten (sowie der Eigentums- und Kontrollstruktur, falls\nVertragspartner keine natürliche Person ist)\n\nAbklärung Geschäftszweck (soweit nicht offensichtlich)\n\nAbklärung PeP-Status von Vertragspartner und wirtschaftlich Berechtigten\n\nÜberwachungspflicht hinsichtlich Geschäftsbeziehung einschließlich Transaktionen sowie in diesem\nRahmen Aktualisierungspflicht"
+      }
+    ],
+    "tokens": 7827,
+    "seconds": 54.6,
+    "run_at": "2026-10-21 12:57"
+  },
+  "X1": {
+    "question": "How must the front office and back office be separated in lending under German rules?",
+    "category": "cross_lingual",
+    "answer": "**Trennung von Front‑Office (Markt) und Back‑Office (Markt‑Folge) im Kreditgeschäft nach den deutschen MaRisk‑Vorgaben**\n\n1. **Organisatorische Aufteilung**  \n   - Die Aufbau‑ und Ablauforganisation muss so gestaltet sein, dass **der Bereich Markt (Front‑Office, Kreditvergabe)** und **der Bereich Markt‑Folge (Back‑Office, Kredit‑Nachbearbeitung, Risikocontrolling, Handelsabwicklung usw.)** bis einschließlich der Ebene der Geschäftsleitung **organisatorisch getrennt** sind [5].  \n   - Diese Trennung umfasst sowohl die **fachliche als auch die disziplinarische Verantwortung** der jeweiligen Funktionen [5].\n\n2. **Votierung (Entscheidungs‑ und Genehmigungsprozess)**  \n   - Für **risikorelevante Kredite** ist eine **zweifache interne Votierung** (Entscheidung durch Front‑Office und anschließende Genehmigung durch das Back‑Office bzw. die Geschäftsleitung) grundsätzlich vorgeschrieben [2].  \n   - **Ausnahme für sehr kleine Institute**: Wenn die Geschäftsleitung unmittelbar in die Vergabe risikorelevanter Kredite eingebunden ist und dadurch eine ordnungsgemäße Handhabung des Kreditgeschäfts sichergestellt bleibt, kann auf die doppelte Votierung verzichtet werden [2].\n\n3. **Verhältnismäßigkeits‑ und Ausnahmeregelungen**  \n   - Auf die Funktionstrennung kann **verzichtet** werden, wenn dies **unter Berücksichtigung von Umfang und Komplexität** des Kreditgeschäfts **verhältnismäßig** ist [2].  \n   - **Nicht‑risikorelevante Kreditgeschäfte** (z. B. standardisiertes Mengengeschäft) können von der strikten Trennung ausgenommen werden; die Abgrenzung ist vom Institut eigenverantwortlich nach Risikogesichtspunkten festzulegen [4].  \n   - Bei **Krediten, die von Dritten initiiert werden** (z. B. Fördergeschäft, Kredite über Hausbanken), ist ebenfalls eine vereinfachte Vorgehensweise zulässig, weil häufig nur ein internes Votum erforderlich ist [4].\n\n4. **Zusammenfassung der Kernanforderungen**  \n   - **Klare organisatorische Trennung** von Front‑Office (Kreditvergabe, Markt) und Back‑Office (Kredit‑Nachbearbeitung, Risiko‑ und Kontrollfunktionen) bis zur Geschäftsleitung.  \n   - **Zwei‑stufige Votierung** für risikorelevante Kredite, mit Ausnahmen für kleine Institute oder bei nachweislich geringer Komplexität.  \n   - **Verhältnismäßigkeitsprüfung**: Bei geringem Umfang/Komplexität oder bei nicht‑risikorelevanten Geschäften kann die Trennung reduziert werden.  \n\nDiese Vorgaben ergeben sich aus dem Rundschreiben 06/2026 (MaRisk) der BaFin, insbesondere den Abschnitten **BTO 1.1 „Funktionstrennung und Votierung“** und **BTO 3 – Aufbau‑ und Ablauforganisation** [2][5].",
+    "trace": [
+      {
+        "step": 1,
+        "tool": "query_documents",
+        "args": {
+          "issuer": "BaFin",
+          "language": "de",
+          "topic": "credit_risk"
+        },
+        "result": "1 documents",
+        "sources": [
+          1
+        ]
+      },
+      {
+        "step": 2,
+        "tool": "search_documents",
+        "args": {
+          "doc_ids": [
+            "bafin_rs_06_2026"
+          ],
+          "language": "de",
+          "query": "Trennung Front Office Back Office Kreditgeschäft"
+        },
+        "result": "4 passages",
+        "sources": [
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    ],
+    "tools_used": [
+      "query_documents",
+      "search_documents"
+    ],
+    "tool_calls": 2,
+    "routing_ok": true,
+    "cited_docs": [
+      "bafin_rs_06_2026"
+    ],
+    "expected_docs": [
+      "bafin_rs_06_2026"
+    ],
+    "faithfulness": 1.0,
+    "flags": [],
+    "sources": [
+      {
+        "n": 1,
+        "type": "catalogue",
+        "citation": "Catalogue entry: Rundschreiben 06/2026 (BA)",
+        "doc_id": "bafin_rs_06_2026",
+        "reference": "Rundschreiben 06/2026 (BA)",
+        "url": null,
+        "text": "Mindestanforderungen an das Risikomanagement (MaRisk) (BaFin, de, 2026-06-30, topics: credit_risk, outsourcing, risk_management)"
+      },
+      {
+        "n": 2,
+        "type": "passage",
+        "citation": "Rundschreiben 06/2026 (BA), BTO 1.1 Tz. 1, p.42",
+        "doc_id": "bafin_rs_06_2026",
+        "reference": "Rundschreiben 06/2026 (BA)",
+        "language": "de",
+        "score": 0.544,
+        "text": "BTO 1.1 Funktionstrennung und Votierung\n1\nMaßgeblicher Grundsatz für die Ausgestaltung der Prozesse im Kreditgeschäft ist die\nklare aufbauorganisatorische Trennung der Bereiche Markt und Marktfolge bis einschließlich der Ebene der Geschäftsleitung.\nBei sehr kleinen Instituten kann auf die Votierung der beiden Bereiche verzichtet werden, wenn die Geschäftsleitung in die Vergabe risikorelevanter Kredite unmittelbar\neingebunden wird und hierdurch eine ordnungsgemäße, den bestehenden Risiken angemessene Handhabung des Kreditgeschäfts sichergestellt bleibt. Insoweit müssen die\nBearbeitung und die Beschlussfassung zu risikorelevanten Krediten von der Geschäftsleitung selbst durchgeführt werden. Auf eine Funktionstrennung kann nur verzichtet\nwerden, wenn dies unter Berücksichtigung von Umfang und Komplexität des Kreditgeschäfts verhältnismäßig ist.\nBei Krediten an Mitarbeiter und an Geschäftsleiter können die aufbauorganisatorischen Anforderungen regelmäßig nicht eins zu eins umgesetzt werden, da es vor allem\nam Bereich Markt fehlt. Grundsätzlich hat bei solchen Kreditentscheidungen eine geeignete Stelle mitzuwirken, die nicht in die Kreditbearbeitung einbezogen ist (z. B. die\nPersonalabteilung). Die eigentliche Bearbeitung kann ggf. auch von den für die Kreditbearbeitung zuständigen Mitarbeitern durchgeführt werden."
+      },
+      {
+        "n": 3,
+        "type": "passage",
+        "citation": "Rundschreiben 06/2026 (BA), AT 8.2 Tz. 33–AT 9–AT 9 Tz. 34–BT 1–BT 1 Tz. 40–BTO–BTO Tz. 40–BTO 1–BTO 1 Tz. 41–BTO 1.1, p.3",
+        "doc_id": "bafin_rs_06_2026",
+        "reference": "Rundschreiben 06/2026 (BA)",
+        "language": "de",
+        "score": 0.529,
+        "text": "33\nAT 9 Auslagerung\n34\nBT 1 Besondere Anforderungen an das interne Kontrollsystem\n40\nBTO Anforderungen an die Aufbau- und Ablauforganisation\n40\nBTO 1 Kreditgeschäft\n41\nBTO 1.1 Funktionstrennung und Votierung"
+      },
+      {
+        "n": 4,
+        "type": "passage",
+        "citation": "Rundschreiben 06/2026 (BA), BTO 1.1 Tz. 4 (part 2), p.43",
+        "doc_id": "bafin_rs_06_2026",
+        "reference": "Rundschreiben 06/2026 (BA)",
+        "language": "de",
+        "score": 0.513,
+        "text": "des Kunden als risikorelevant eingestuft wird.\nAbgrenzungen zwischen risikorelevantem und nicht-risikorelevantem Kreditgeschäft\nDie Abgrenzungen zwischen risikorelevantem und nicht-risikorelevantem Kreditgeschäft sind von jedem Institut eigenverantwortlich und unter Risikogesichtspunkten\nfestzulegen. Zu den nicht risikorelevanten Kreditgeschäften dürfte z. B. regelmäßig das\nstandardisierte Mengengeschäft zu rechnen sein.\nInitiierung durch Dritte\nVereinfachungen im Hinblick auf die Funktionstrennung sind auch dann möglich,\nwenn es sich um Kreditgeschäfte handelt, die von Dritten initiiert wurden. So ist es im\nFördergeschäft in der Regel nicht erforderlich, zwei institutsinterne Voten einzuholen,\nda die Kreditgeschäfte häufig von einer Hausbank oder einer Beteiligungsgesellschaft\ninitiiert werden. Vergleichbare Konstellationen ergeben sich z. B. bei Kreditgeschäften\nvon Instituten über Händlerorganisationen, bei Bausparkassen über Handelsvertreter,\nbei Bürgschaftsbanken über Hausbanken oder, bezogen auf den Konsorten, vom Konsortialführer bei gemeinschaftlich vergebenen Engagements. Bei risikorelevanten Kreditentscheidungen muss das im Institut einzuholende weitere Votum grundsätzlich\nvertriebsunabhängig, also – sofern vorhanden – in der Marktfolge wahrgenommen\nwerden."
+      },
+      {
+        "n": 5,
+        "type": "passage",
+        "citation": "Rundschreiben 06/2026 (BA), BTO Tz. 3, p.41",
+        "doc_id": "bafin_rs_06_2026",
+        "reference": "Rundschreiben 06/2026 (BA)",
+        "language": "de",
+        "score": 0.503,
+        "text": "3\nDie Aufbauorganisation ist so zu gestalten, dass Markt (Kredit) und Handel bis einschließlich Geschäftsleiterebene von Marktfolge (Kredit), Risikocontrolling, Handelsabwicklung sowie von weiteren Bereichen bzw. Funktionen organisatorisch getrennt sind\n(BTO 1.1 Tz. 7, BTO 1.2 Tz. 1, BTO 1.2.4 Tz. 1, BTO 1.2.5 Tz. 1 und BTO 1.4 Tz. 2). Gleiches gilt\nfür den Bereich Markt (Immobilien) gegenüber Marktfolge (Immobilien), Risikocontrolling und der in BTO 3.2 Tz. 3 genannten Funktion (sachverständige Personen). Eine aufbauorganisatorische Trennung bis einschließlich der Ebene der Geschäftsleitung umfasst die fachliche und disziplinarische Trennung der Verantwortlichkeiten.\nFunktionstrennung bei CRD-Drittstaatenzweigstellen\nBei CRD-Drittstaatenzweigstellen ist eine Abweichung zulässig, sofern die fachliche\nTrennung der Verantwortlichkeiten dem Prinzip der Funktionstrennung bis einschließlich Geschäftsleiterebene entspricht."
+      }
+    ],
+    "tokens": 9240,
+    "seconds": 59.2,
+    "run_at": "2026-10-21 12:58"
+  },
+  "X2": {
+    "question": "Under MaRisk, which activities may a bank outsource and which risks must it manage?",
+    "category": "cross_lingual",
+    "answer": "**Welche Aktivitäten dürfen nach MaRisk ausgelagert werden?**  \n\n- Eine Auslagerung liegt vor, wenn ein Drittfirmen‑Unternehmen mit der Wahrnehmung von **Aktivitäten und Prozessen** beauftragt wird, die sonst vom Institut selbst im Zusammenhang mit der Durchführung von **Bankgeschäften, Finanzdienstleistungen oder sonstigen institutstypischen Dienstleistungen** erbracht würden [5].  \n- Grundsätzlich **können alle Aktivitäten und Prozesse** ausgelagert werden, solange die **Ordnungsmäßigkeit der Geschäftsorganisation nach § 25a Abs. 1 KWG nicht beeinträchtigt** wird [1].  \n- Ausgeschlossen sind **Leitungsaufgaben der Geschäftsleitung** – diese dürfen nicht delegiert werden [1].  \n- Die **Interne Revision** kann auf eigene Prüfungshandlungen verzichten, wenn eine andere Revisionstätigkeit die Aufsichtsvorgaben erfüllt und die Ergebnisse weitergegeben werden [1].  \n- Eine **vollständige Auslagerung von Risikocontrolling, Compliance‑Funktion oder Interner Revision** ist für **Tochterinstitute innerhalb einer Institutsgruppe** zulässig, sofern das auslagernde Institut nach Größe, Komplexität und Risikogehalt nicht als wesentlich eingestuft wird [3].  \n- Auch **Aktivitäten in Kernbank‑ und Kontrollbereichen** dürfen ausgelagert werden, sofern eine wirksame Überwachung der Dienstleistung des Auslagerungsunternehmens sichergestellt ist [3].\n\n**Welche Risiken muss das Institut im Rahmen der Auslagerung steuern?**  \n\n1. **Gesamt‑Risiko der Auslagerung** – das Institut muss die mit der Auslagerung verbundenen Risiken **angemessen steuern** und die Ausführung der ausgelagerten Aktivitäten **ordentlich überwachen** (z. B. über KPIs, KRIs und vertraglich vereinbarte Informationen) [6].  \n2. **Risikomanagement‑Prozess** – ein zentrales Auslagerungs‑Management ist einzurichten, das u. a. umfasst:  \n   - Implementierung und Weiterentwicklung eines angemessenen Auslagerungs‑Managements samt Kontroll‑ und Überwachungsprozessen [2a];  \n   - Vollständige Dokumentation aller Auslagerungen (Auslagerungsregister) [2b];  \n   - Unterstützung der Fachbereiche bei institutionellen und gesetzlichen Anforderungen [2c];  \n   - Koordination und Überprüfung der von den Fachbereichen durchgeführten **Risikoanalyse** gemäß AT 9 Tz. 2 [2d].  \n3. **Kontinuitäts‑ und Exit‑Risiken** – bei wesentlichen Auslagerungen müssen Vorkehrungen getroffen werden, die **Kontinuität und Qualität** der ausgelagerten Prozesse auch nach einer (unbeabsichtigten oder geplanten) Beendigung sicherstellen; hierzu gehören **Ausstiegsstrategien** und deren regelmäßige Überprüfung [7].  \n4. **Risiko von Weiterverlagerungen** – bei Weiterverlagerungen (Sub‑Outsourcing) sind die gleichen Anforderungen zu beachten; das Institut muss das Risiko berücksichtigen, dass lange und komplexe Auslagerungsketten die **Überwachungsfähigkeit** einschränken können [4][11].  \n\nZusammengefasst dürfen Banken nach MaRisk praktisch alle bank‑ und finanzdienstleistungsbezogenen Aktivitäten auslagern, **außer den Leitungsaufgaben der Geschäftsleitung**, wobei bei Tochterinstituten auch komplette Risikocontrolling‑, Compliance‑ und Revisionsfunktionen auslagerbar sind. Gleichzeitig muss das Institut ein umfassendes Auslagerungs‑Risiko‑Management etablieren, das Risikoanalyse, fortlaufende Überwachung (KPIs/KRIs), vollständige Dokumentation, Kontinuitäts‑ und Exit‑Strategien sowie die Kontrolle von Weiterverlagerungen umfasst.  ",
+    "trace": [
+      {
+        "step": 1,
+        "tool": "search_documents",
+        "args": {
+          "doc_ids": [
+            "bafin_rs_06_2026"
+          ],
+          "language": "de",
+          "query": "Auslagerung Aktivitäten welche Tätigkeiten dürfen ausgelagert werden Risiken zu managen"
+        },
+        "result": "4 passages",
+        "sources": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "step": 2,
+        "tool": "search_documents",
+        "args": {
+          "doc_ids": [
+            "bafin_rs_06_2026"
+          ],
+          "language": "de",
+          "query": "Auslagerung von Aktivitäten und Prozessen welche Aktivitäten dürfen ausgelagert werden"
+        },
+        "result": "4 passages",
+        "sources": [
+          1,
+          5,
+          3,
+          4
+        ]
+      },
+      {
+        "step": 3,
+        "tool": "search_documents",
+        "args": {
+          "doc_ids": [
+            "bafin_rs_06_2026"
+          ],
+          "language": "de",
+          "query": "Risiken zu managen Auslagerung"
+        },
+        "result": "4 passages",
+        "sources": [
+          4,
+          6,
+          2,
+          7
+        ]
+      }
+    ],
+    "tools_used": [
+      "search_documents",
+      "search_documents",
+      "search_documents"
+    ],
+    "tool_calls": 3,
+    "routing_ok": true,
+    "cited_docs": [
+      "bafin_rs_06_2026"
+    ],
+    "expected_docs": [
+      "bafin_rs_06_2026"
+    ],
+    "faithfulness": 0.9,
+    "flags": [
+      {
+        "claim": "Citation [11]",
+        "cited": [
+          11
+        ],
+        "verdict": "unsupported",
+        "reason": "This source number does not exist."
+      },
+      {
+        "claim": "A central outsourcing‑management system must be established, including a register, support for business units, and coordination/review of risk analyses per AT 9 Tz 2.",
+        "cited": [
+          2
+        ],
+        "verdict": "unsupported",
+        "reason": "No provided source [2] exists; the claim is not backed by the listed references."
+      }
+    ],
+    "sources": [
+      {
+        "n": 1,
+        "type": "passage",
+        "citation": "Rundschreiben 06/2026 (BA), AT 9 Tz. 4 (part 1), p.35",
+        "doc_id": "bafin_rs_06_2026",
+        "reference": "Rundschreiben 06/2026 (BA)",
+        "language": "de",
+        "score": 0.659,
+        "text": "4\nGrundsätzlich dürfen Aktivitäten und Prozesse ausgelagert werden, solange dadurch\ndie Ordnungsmäßigkeit der Geschäftsorganisation gemäß § 25a Abs. 1 KWG nicht beeinträchtigt wird (z.B. keine Empty Shell). Die Auslagerung führt nicht zu einer Delegation der Verantwortung der Geschäftsleitung an das Auslagerungsunternehmen. Die\nLeitungsaufgaben der Geschäftsleitung dürfen nicht ausgelagert werden. Die Interne\nRevision des Instituts kann im Fall von Auslagerungen auf eigene Prüfungshandlungen\nverzichten, sofern anderweitig eine Revisionstätigkeit durchgeführt wird, die den aufsichtlichen Anforderungen genügt, und die relevanten Prüfungsergebnisse weitergegeben werden. Die Interne Revision des auslagernden Instituts muss sich regelmäßig von\nder Einhaltung dieser Voraussetzungen überzeugen. Besondere Maßstäbe für Auslagerungsmaßnahmen ergeben sich bei der vollständigen oder teilweisen Auslagerung der\nbesonderen Funktionen Risikocontrolling-Funktion, Compliance-Funktion und Interne\nRevision. Spezialgesetzliche Regelungen sind zu beachten.\nBefugnis der Leistungserbringung des Auslagerungsunternehmens\nDas Institut darf Aktivitäten und Prozesse nur an ein Auslagerungsunternehmen auslagern, das nach dem Recht seines Sitzlandes zur Ausübung der ausgelagerten Aktivitäten und Prozesse befugt ist.\nAnderweitige Durchführung der Revisionstätigkeit\nDie Revisionstätigkeit kann übernommen werden durch:\n-\ndie Interne Revision des Auslagerungsunternehmens,\n-"
+      },
+      {
+        "n": 2,
+        "type": "passage",
+        "citation": "Rundschreiben 06/2026 (BA), AT 9 Tz. 12, p.38",
+        "doc_id": "bafin_rs_06_2026",
+        "reference": "Rundschreiben 06/2026 (BA)",
+        "language": "de",
+        "score": 0.609,
+        "text": "12\nDas Institut muss abhängig von der Art, dem Umfang und der Komplexität der Auslagerungsaktivitäten ein zentrales Auslagerungsmanagement einrichten. Zu den Aufgaben zählen insbesondere:\na)\nImplementierung und Weiterentwicklung eines angemessenen Auslagerungsmanagements und entsprechender Kontroll- und Überwachungsprozesse,\nb)\nErstellung und Pflege einer vollständigen Dokumentation der Auslagerungen\n(einschließlich Weiterverlagerungen) gemäß § 25b Abs. 1 Satz 4 KWG (Auslagerungsregister),\nc)\nUnterstützung der Fachbereiche bezüglich der institutsinternen und gesetzlichen Anforderungen bei Auslagerungen,\nd)\nKoordination und Überprüfung der durch die zuständigen Bereiche durchgeführten Risikoanalyse gemäß Tz. 2."
+      },
+      {
+        "n": 3,
+        "type": "passage",
+        "citation": "Rundschreiben 06/2026 (BA), AT 9 Tz. 5, p.35",
+        "doc_id": "bafin_rs_06_2026",
+        "reference": "Rundschreiben 06/2026 (BA)",
+        "language": "de",
+        "score": 0.603,
+        "text": "5\nEine Auslagerung von Aktivitäten und Prozessen in Kontrollbereichen und Kernbankbereichen kann unter Beachtung der in Tz. 4 genannten Anforderungen in einem Umfang\nvorgenommen werden, der gewährleistet, dass eine wirksame Überwachung der vom\nAuslagerungsunternehmen erbrachten Dienstleistungen gewährleistet ist. Es ist sicherzustellen, dass bei Bedarf – z.B. im Falle der Beendigung des Auslagerungsverhältnisses - der ordnungsmäßige Betrieb in diesen Bereichen fortgesetzt werden kann. Eine\nvollständige Auslagerung der Risikocontrolling-Funktion, Compliance-Funktion oder\nInternen Revision ist für Tochterinstitute innerhalb einer Institutsgruppe zulässig, sofern das auslagernde Institut sowohl nach Größe, Komplexität und Risikogehalt der\nGeschäftsaktivitäten für den nationalen Finanzsektor als auch hinsichtlich seiner Bedeutung innerhalb der Gruppe als nicht wesentlich einzustufen ist. Gleiches gilt für\nGruppen, wenn das Mutterunternehmen kein Institut und im Inland ansässig ist. Eine\nvollständige Auslagerung der Compliance-Funktion oder der Internen Revision ist ferner bei sehr kleinen Instituten möglich."
+      },
+      {
+        "n": 4,
+        "type": "passage",
+        "citation": "Rundschreiben 06/2026 (BA), AT 9 Tz. 11, p.38",
+        "doc_id": "bafin_rs_06_2026",
+        "reference": "Rundschreiben 06/2026 (BA)",
+        "language": "de",
+        "score": 0.602,
+        "text": "11\nDie Anforderungen an die Auslagerung von Aktivitäten und Prozessen sind auch bei\nder Weiterverlagerung ausgelagerter Aktivitäten und Prozesse zu beachten.\nRisikoanalyse gemäß Tz. 2\nDie erweiterten Anforderungen für wesentliche Auslagerungen finden nur für Weiterverlagerungen Anwendung, die unter Risikogesichtspunkten wesentlich sind.\nZudem muss das Risiko berücksichtigt werden, dass die Fähigkeit der Institute zur\nÜberwachung der ausgelagerten Aktivitäten und Prozesse durch lange und komplexe\nAuslagerungsketten eingeschränkt sein kann."
+      },
+      {
+        "n": 5,
+        "type": "passage",
+        "citation": "Rundschreiben 06/2026 (BA), AT 9 Tz. 1 (part 1), p.34",
+        "doc_id": "bafin_rs_06_2026",
+        "reference": "Rundschreiben 06/2026 (BA)",
+        "language": "de",
+        "score": 0.568,
+        "text": "AT 9 Auslagerung\n1\nEine Auslagerung liegt vor, wenn ein anderes Unternehmen mit der Wahrnehmung\nvon Aktivitäten und Prozessen im Zusammenhang mit der Durchführung von Bankgeschäften, Finanzdienstleistungen oder sonstigen institutstypischen Dienstleistungen\nbeauftragt wird, die ansonsten vom Institut selbst erbracht würden. Zivilrechtliche Gestaltungen und Vereinbarungen können dabei das Vorliegen einer Auslagerung nicht\nvon vornherein ausschließen.\nSonstiger Fremdbezug von Leistungen\nNicht als Auslagerung zu qualifizieren ist der sonstige Fremdbezug von Leistungen.\nHierzu zählt zunächst der einmalige oder gelegentliche Fremdbezug von Gütern und\nDienstleistungen. Ebenso erfasst werden Leistungen, die typischerweise von einem beaufsichtigten Unternehmen bezogen werden und aufgrund tatsächlicher Gegebenheiten oder rechtlicher Vorgaben regelmäßig weder zum Zeitpunkt des Fremdbezugs\nnoch in der Zukunft vom Institut selbst erbracht werden können. Dessen ungeachtet\nmuss das Institut auch beim sonstigen Fremdbezug von Leistungen darauf achten,\ndass die Ordnungsmäßigkeit der Geschäftsorganisation gemäß § 25a Abs. 1 KWG nicht\nbeeinträchtigt wird.\nDORA (Verordnung (EU) 2022/2554)\nAusgelagerte oder fremdbezogene IKT-Dienstleistungen gemäß Art. 3 Nr. 21 DORA, die\ndem IKT-Drittparteienrisikomanagement gemäß Art. 28-30 DORA unterliegen, fallen\nnicht in den Anwendungsbereich des AT 9.\nPflichten im Hinblick auf Geldwäscheprävention"
+      },
+      {
+        "n": 6,
+        "type": "passage",
+        "citation": "Rundschreiben 06/2026 (BA), AT 9 Tz. 9, p.37",
+        "doc_id": "bafin_rs_06_2026",
+        "reference": "Rundschreiben 06/2026 (BA)",
+        "language": "de",
+        "score": 0.582,
+        "text": "9\nDas Institut muss die mit Auslagerungen verbundenen Risiken angemessen steuern\nund die Ausführung der ausgelagerten Aktivitäten und Prozesse ordnungsgemäß überwachen. Dies umfasst bei wesentlichen Auslagerungen auch die laufende Überwachung der Leistung des Auslagerungsunternehmens anhand vorzuhaltender Kriterien\n(z. B. Key Performance Indicators, Key Risk Indicators) und vertraglich vereinbarter Informationen des Auslagerungsunternehmens."
+      },
+      {
+        "n": 7,
+        "type": "passage",
+        "citation": "Rundschreiben 06/2026 (BA), AT 9 Tz. 6, p.36",
+        "doc_id": "bafin_rs_06_2026",
+        "reference": "Rundschreiben 06/2026 (BA)",
+        "language": "de",
+        "score": 0.573,
+        "text": "6\nDas Institut muss bei wesentlichen Auslagerungen Vorkehrungen treffen, um die Kontinuität und Qualität der ausgelagerten Aktivitäten und Prozesse auch nach Beendigung der Auslagerungsvereinbarung zu gewährleisten. Für Fälle unbeabsichtigter oder\nunerwarteter Beendigung dieser Auslagerungen, die mit einer erheblichen Beeinträchtigung der Geschäftstätigkeit verbunden sein können, muss das Institut etwaige Handlungsoptionen auf ihre Durchführbarkeit prüfen und verabschieden. Dies beinhaltet\nauch, soweit sinnvoll und möglich, die Festlegung entsprechender Ausstiegsstrategien.\nDie Handlungsoptionen sind regelmäßig und anlassbezogen zu überprüfen.\nHandlungsoptionen\nExistieren keine Handlungsoptionen, ist zumindest eine angemessene Berücksichtigung in der Notfallplanung erforderlich."
+      }
+    ],
+    "tokens": 15152,
+    "seconds": 101.7,
+    "run_at": "2026-10-21 13:00"
+  },
+  "X3": {
+    "question": "Welche Anforderungen gelten für die Videoidentifizierung bei der Fernkontoeröffnung?",
+    "category": "cross_lingual",
+    "answer": "**Anforderungen an die Videoidentifizierung bei der Fernkontoeröffnung**\n\n1. **Zulässigkeit**  \n   - Banken, die von der BaFin beaufsichtigt werden, dürfen das **Videoidentifizierungsverfahren** einsetzen, um die Identität einer natürlichen Person zu prüfen [1].\n\n2. **Sicherheitsniveau**  \n   - Das Verfahren muss ein **Sicherheitsniveau** aufweisen, das dem der Vor‑Ort‑Prüfung von Identifikationsdokumenten gleichwertig ist. Es fällt damit unter die in § 13 Abs. 1 Nr. 2 GwG genannten „sonstigen geeigneten Verfahren“ [2].\n\n3. **Technische Grundlage**  \n   - Das Video‑Ident‑System muss ein **notifiziertes elektronisches Identifizierungssystem** nach der eIDAS‑Verordnung (Verordnung (EU) Nr. 910/2014) nutzen, also die Anforderungen von Art. 8 Abs. 2 c i.V.m. Art. 9 der Verordnung erfüllen [1].\n\n4. **Regulatorische Referenz**  \n   - Die konkreten Detailanforderungen ergeben sich aus dem **BaFin‑Rundschreiben 3/2017 (GW) vom 10. April 2017**. Dieses Rundschreiben wird in den Auslegungs‑ und Anwendungshinweisen ausdrücklich als maßgebliche Vorgabe genannt [1].\n\n5. **Keine abweichende Rechtsverordnung**  \n   - Bis zur Veröffentlichung einer eigenen Rechtsverordnung zu diesem Verfahren gibt es keine zusätzlichen gesetzlichen Vorgaben; die genannten Anforderungen aus dem Rundschreiben und der eIDAS‑Verordnung gelten somit als verbindlich [1].\n\n**Kurzfassung:**  \nFür die Videoidentifizierung bei der Fernkontoeröffnung muss ein von der EU notifiziertes eIDAS‑konformes Identifizierungssystem eingesetzt werden, das ein Sicherheitsniveau gleichwertig zur Vor‑Ort‑Prüfung bietet und die Vorgaben des BaFin‑Rundschreibens 3/2017 erfüllt [1][2].",
+    "trace": [
+      {
+        "step": 1,
+        "tool": "search_documents",
+        "args": {
+          "language": "de",
+          "query": "Videoidentifizierung Fernkontoeröffnung"
+        },
+        "result": "4 passages",
+        "sources": [
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    ],
+    "tools_used": [
+      "search_documents"
+    ],
+    "tool_calls": 1,
+    "routing_ok": true,
+    "cited_docs": [
+      "bafin_aua_gwg"
+    ],
+    "expected_docs": [
+      "eba_gl_2022_15"
+    ],
+    "faithfulness": 1.0,
+    "flags": [],
+    "sources": [
+      {
+        "n": 1,
+        "type": "passage",
+        "citation": "AuA GwG, 5.1.3.2 (part 8), p.42",
+        "doc_id": "bafin_aua_gwg",
+        "reference": "AuA GwG",
+        "language": "de",
+        "score": 0.515,
+        "text": "Zur Überprüfung der zur Identifizierung erhobenen Angaben kann auch ein notifiziertes\nelektronisches Identifizierungssystem nach der sogenannte eIDAS-Verordnung über elektronische\nIdentifizierung und Vertrauensdienste (Art. 8 Abs. 2 c) i.V.m. Art. 9 der VO (EU) Nr. 910/2014) genutzt\nwerden.\nf.\nVideoidentifizierungsverfahren\n\nVerpflichtete unter der Aufsicht der BaFin dürfen zur Überprüfung der zur Identifizierung erhobenen\nAngaben einer natürlichen Person auch das sogenannte Videoidentifizierungsverfahren einsetzen.\nDie diesbezüglichen Anforderungen ergeben sich aus dem BaFin-Rundschreiben 3/2017 (GW) vom\n10.04.2017, auf welches verwiesen wird.\ng. Sonstige durch Rechtsverordnung bestimmte geeignete Verfahren gemäß\n§ 13 Abs. 1 Nr. 2, Abs. 2 Nr. 2 GwG.\nBis zur Veröffentlichung dieser Auslegungs- und Anwendungshinweise ist keine entsprechende\nRechtsverordnung ergangen.\n\nh. Durch Rechtsverordnung bestimmte Verfahren, deren Eignung zur geldwäscherechtlichen\nÜberprüfung erprobt wird, gemäß § 13 Abs. 1 Nr. 2, Abs. 2 Nr. 3 GwG\n\nBis zur Veröffentlichung dieser Auslegungs- und Anwendungshinweise wurde noch kein Verfahren\nzur Erprobung bestimmt."
+      },
+      {
+        "n": 2,
+        "type": "passage",
+        "citation": "AuA GwG, 5.1.3.2 (part 1), p.42",
+        "doc_id": "bafin_aua_gwg",
+        "reference": "AuA GwG",
+        "language": "de",
+        "score": 0.506,
+        "text": "5.1.3.2 Überprüfung der erhobenen Angaben\nDie Identität einer natürlichen Person ist zu überprüfen. Anhand welcher Identifikationsnachweise die\nÜberprüfung der\nzur\nIdentifizierung\nerhobenen Angaben\nvorgenommen werden\ndarf, legt\n§ 12 Abs. 1 Satz 1 Nr. 1-5 GwG fest.\n§ 13 GwG gibt die Verfahren vor, die hierzu eingesetzt werden dürfen. Neben der angemessenen Überprüfung\nbestimmter vor Ort vorgelegter Identifikationsdokumente gemäß § 13 Abs. 1 Nr. 1 GwG i.V.m. § 12 Abs. 1 Satz\n1 Nr. 1 und Nr. 5 GwG kann eine Überprüfung auch mittels eines sonstigen geeigneten Verfahrens erfolgen,\ndessen Sicherheitsniveau der Dokumentenvorlage vor Ort gleichwertig ist, § 13 Abs. 1 Nr. 2 GwG. Zu diesen\nletztgenannten gleichwertigen Verfahren gehört die Verwendung eines in § 12 Abs. 1 Satz 1 Nr. 2 GwG erwähnten elektronischen Identitätsnachweises, die Verwendung einer qualifizierten elektronischen Signatur\ngemäß § 12 Abs. 1 Satz 1 Nr. 3 GwG sowie eines in § 12 Abs. 1 Satz 1 Nr. 4 GwG genannten notifizierten\nelektronischen Identifizierungssystems. Darüber hinaus können weitere sonstige geeignete Verfahren gemäß\n§ 13 Abs. 1 Nr. 2 GwG ausschließlich durch Rechtsverordnung gemäß § 13 Abs. 2 Nr. 2 GwG zugelassen werden.\nDas BaFin-Rundschreiben 3/2017 (GW) vom 10.04.2017 für die technischen und sonstigen Anforderungen an\ndas Videoidentifizierungsverfahren gilt weiterhin.\nDamit stehen im Einzelnen folgende Möglichkeiten zur Überprüfung der erhobenen Angaben von natürlichen\nPersonen zur Verfügung:"
+      },
+      {
+        "n": 3,
+        "type": "passage",
+        "citation": "AuA GwG, 5.1.3.2 (part 5), p.42",
+        "doc_id": "bafin_aua_gwg",
+        "reference": "AuA GwG",
+        "language": "de",
+        "score": 0.465,
+        "text": "Klarstellend\nwird\ndarauf\nhingewiesen,\ndass\nungeachtet\nder\nFormulierung\ndes\n§ 12 Abs. 1 Satz 1 Nr. 5 GwG bzw. des fehlenden Verweises auf Abs. 2 des § 1 ZldPrüfV Duldungen\nund Ankunftsnachweise als Identifikationsdokumente für die Eröffnung von Basiskonten\nherangezogen werden dürfen.\nc. Elektronischer Identitätsnachweis gemäß § 12 Abs. 1 Satz 1 Nr. 2 GwG\n\nEine Identitätsüberprüfung kann ferner anhand eines elektronischen Identitätsnachweises gemäß\n§\n18\ndes Personalausweisgesetzes, nach\n§\n12\ndes\neID-Karte-Gesetzes oder nach\n§ 78 Abs. 5 des Aufenthaltsgesetzes erfolgen.\nd. Qualifizierte elektronische Signatur gemäß § 12 Abs. 1 Satz 1 Nr. 3 GwG"
+      },
+      {
+        "n": 4,
+        "type": "passage",
+        "citation": "AuA GwG, 5.1.3.2 (part 2), p.42",
+        "doc_id": "bafin_aua_gwg",
+        "reference": "AuA GwG",
+        "language": "de",
+        "score": 0.434,
+        "text": "Damit stehen im Einzelnen folgende Möglichkeiten zur Überprüfung der erhobenen Angaben von natürlichen\nPersonen zur Verfügung:\na. Vor-Ort Prüfung eines qualifizierten Identifikationsdokuments, § 12 Abs. 1 Satz 1 Nr. 1 GwG"
+      }
+    ],
+    "tokens": 6624,
+    "seconds": 44.1,
+    "run_at": "2026-10-21 13:01"
+  },
+  "H1": {
+    "question": "What do AML documents issued after 2022 say about enhanced due diligence for high-risk customers?",
+    "category": "chained",
+    "answer": "**Enhanced due‑diligence (EDD) for high‑risk customers in AML guidance issued after 2022**\n\n| Regulator | Document (date) | Core requirement for high‑risk customers | Typical EDD measures mentioned |\n|-----------|----------------|-------------------------------------------|--------------------------------|\n| **European Banking Authority (EBA)** | *Guidelines amending the ML/TF Risk Factors Guidelines* (EBA/GL/2024/01 – 16 Jan 2024) | When a business relationship or occasional transaction is assessed as high‑risk, the credit‑or‑investment‑service‑provider (CASP) must apply the enhanced CDD measures required by Article 18 of Directive (EU) 2015/849. The guideline explicitly replaces the previous wording with a mandatory “apply EDD” rule (para 26) [6]. | • Verify the customer’s and the beneficial owner’s identity using **more than one reliable, independent source** (para 21.12) [3];<br>• Identify and verify the identity of majority shareholders or persons who can operate crypto‑asset accounts (para 21.12) [3];<br>• Check whether the customer or beneficial owner has links to **high‑risk sectors** (e.g., money‑service businesses, crypto‑asset service providers, casinos, precious‑metal dealers) (para 11) [4];<br>• For relationships involving **high‑risk non‑EU countries**, follow the full Title I guidance (para 21.14) [5];<br>• Apply the full set of EDD measures in line with Article 18 whenever the risk assessment flags a high‑risk relationship (para 26) [6]. |\n| **Federal Financial Supervisory Authority (BaFin)** | *Auslegungs‑ und Anwendungshinweise zum Geldwäschegesetz* (AuA GwG – 1 Jul 2025) | § 15 Abs. 3 Nr. 2 GwG obliges institutions to fulfil a **minimum set of enhanced‑due‑diligence (ver‑stärkte Sorgfaltspflichten)** whenever a business relationship or transaction involves a third country that the European Commission has designated as high‑risk, or a natural/juristic person resident in such a country. The guidance also states that **any higher‑risk situation identified through a risk analysis triggers additional EDD** (§ 15 Abs. 2 GwG) [7][9]. | • Minimum EDD includes the items listed in §§ 15 Abs. 3 Nr. 2 GwG (e.g., deeper verification of identity, source of funds, and purpose of the relationship) [7];<br>• Depending on the **degree of risk**, further measures may be required (e.g., more extensive documentation, ongoing monitoring) [7];<br>• Institutions must be able to **demonstrate the adequacy of the measures** to BaFin on request (para 6.2) [9];<br>• The risk‑assessment must consider account purpose, transaction size, frequency, and duration (para 5.6) [10], which feed into the decision on whether enhanced measures are needed. |\n\n### Summary of what the post‑2022 AML documents say\n\n1. **Risk‑based trigger** – Both the EBA and BaFin require that an institution first conduct a risk assessment. If the assessment identifies a **high‑risk customer, sector, product, or jurisdiction**, enhanced due diligence must be applied.\n\n2. **Mandatory EDD** –  \n   *EBA*: Explicitly mandates the application of the EDD set out in Article 18 of the 4th AML Directive for high‑risk relationships (para 26) [6].  \n   *BaFin*: Requires at least the minimum EDD prescribed in § 15 Abs. 3 Nr. 2 GwG for high‑risk third‑country customers, and any higher‑risk case may demand additional measures (para 7.2, 6.2) [7][9].\n\n3. **Typical enhanced measures** –  \n   *Identity verification from multiple independent sources*; *identification of beneficial owners and majority shareholders*; *screening for links to high‑risk sectors (crypto‑services, casinos, precious‑metal dealers, etc.)*; *special handling of high‑risk non‑EU jurisdictions*; *more detailed documentation of source of funds, purpose, and transaction patterns*; and *continuous monitoring*.\n\n4. **Documentation & supervisory oversight** – BaFin stresses that institutions must be able to **account for the adequacy of their EDD** to the regulator (para 6.2) [9]; the EBA guidance likewise expects CASPs to apply the measures “as appropriate” and to retain evidence of the risk assessment and the steps taken (para 21.12) [3].\n\nThus, AML guidance issued after 2022 from both the EBA and BaFin converges on a **risk‑based, mandatory EDD regime for high‑risk customers**, detailing concrete verification steps and emphasizing the need for documentation and supervisory accountability.",
+    "trace": [
+      {
+        "step": 1,
+        "tool": "query_documents",
+        "args": {
+          "date_from": "2023-01-01",
+          "topic": "aml"
+        },
+        "result": "2 documents",
+        "sources": [
+          1,
+          2
+        ]
+      },
+      {
+        "step": 2,
+        "tool": "search_documents",
+        "args": {
+          "doc_ids": [
+            "eba_gl_2024_01"
+          ],
+          "query": "enhanced due diligence high-risk customers"
+        },
+        "result": "4 passages",
+        "sources": [
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "step": 3,
+        "tool": "search_documents",
+        "args": {
+          "doc_ids": [
+            "bafin_aua_gwg"
+          ],
+          "query": "erweiterte Sorgfaltspflicht Hochrisikokunden"
+        },
+        "result": "4 passages",
+        "sources": [
+          7,
+          8,
+          9,
+          10
+        ]
+      }
+    ],
+    "tools_used": [
+      "query_documents",
+      "search_documents",
+      "search_documents"
+    ],
+    "tool_calls": 3,
+    "routing_ok": true,
+    "cited_docs": [
+      "bafin_aua_gwg",
+      "eba_gl_2024_01"
+    ],
+    "expected_docs": [
+      "eba_gl_2024_01",
+      "bafin_aua_gwg"
+    ],
+    "faithfulness": 0.8,
+    "flags": [
+      {
+        "claim": "EBA guideline mandates that when a relationship is high‑risk, the CASP must apply the enhanced CDD measures required by Article 18 of Directive (EU) 2015/849",
+        "cited": [
+          6
+        ],
+        "verdict": "partially_supported",
+        "reason": "Source says the bank should apply EDD measures, not that it must"
+      },
+      {
+        "claim": "The minimum EDD under BaFin includes deeper verification of identity, source of funds and purpose of the relationship",
+        "cited": [
+          7
+        ],
+        "verdict": "partially_supported",
+        "reason": "Source mentions a minimum set of enhanced duties but does not list those exact items"
+      }
+    ],
+    "sources": [
+      {
+        "n": 1,
+        "type": "catalogue",
+        "citation": "Catalogue entry: EBA/GL/2024/01",
+        "doc_id": "eba_gl_2024_01",
+        "reference": "EBA/GL/2024/01",
+        "url": null,
+        "text": "Guidelines amending the ML/TF Risk Factors Guidelines (EBA, en, 2024-01-16, topics: aml)"
+      },
+      {
+        "n": 2,
+        "type": "catalogue",
+        "citation": "Catalogue entry: AuA GwG",
+        "doc_id": "bafin_aua_gwg",
+        "reference": "AuA GwG",
+        "url": null,
+        "text": "Auslegungs- und Anwendungshinweise zum Geldwäschegesetz (BaFin, de, 2025-07-01, topics: aml)"
+      },
+      {
+        "n": 3,
+        "type": "passage",
+        "citation": "EBA/GL/2024/01, para 21.12 (part 1), p.29",
+        "doc_id": "eba_gl_2024_01",
+        "reference": "EBA/GL/2024/01",
+        "language": "en",
+        "score": 0.57,
+        "text": "21.12. Where the risk associated with a business relationship or occasional transaction is in-creased, CASPs have to apply enhanced CDD measures pursuant to Article 18 of Di-rective (EU) 2015/849 and as set out in Title I of these Guidelines. In addition, CASPs\nshould apply relevant enhanced CDD measures enumerated in the list below, as neces-sary, depending on the risk exposure of the business relationship:\n\na) Verify the customer’s and the beneficial owner’s identity on the basis of\nmore than one reliable and independent source.\n\nb) Identify and verify the identity of majority shareholders that do not meet the\ndefinition of beneficial owners in accordance with Article 3 of Directive (EU)\n2015/849 or any natural persons who have authority to operate a crypto-asset account or distributed ledger address on behalf of the customer or give\ninstructions on the transfer or exchange of crypto-assets or other services\nrelating to those crypto-assets."
+      },
+      {
+        "n": 4,
+        "type": "passage",
+        "citation": "EBA/GL/2024/01, para 11, p.14",
+        "doc_id": "eba_gl_2024_01",
+        "reference": "EBA/GL/2024/01",
+        "language": "en",
+        "score": 0.56,
+        "text": "11. In Guideline 2.4, point b) is replaced by the following:\n\n‘b) Does the customer or beneficial owner have links to sectors that are associated with higher\nML/TF risk, for example certain money service businesses, providers of crypto-assets services as\ndescribed in Guidelines 9.20 and 9.21, casinos or dealers in precious metals?’\n(v) Amendments to Guideline 4: CDD measures to be applied by all\nfirms"
+      },
+      {
+        "n": 5,
+        "type": "passage",
+        "citation": "EBA/GL/2024/01, para 21.14–21.15, p.31",
+        "doc_id": "eba_gl_2024_01",
+        "reference": "EBA/GL/2024/01",
+        "language": "en",
+        "score": 0.552,
+        "text": "21.14. In respect of business relationships or transactions involving high-risk non-EU countries,\nCASPs should follow the guidance in Title I of these Guidelines.\n\nSimplified customer due diligence\n21.15. In low-risk situations, which have been classified as such as a result of the ML/TF risk\nassessment carried out by the CASP in keeping with these Guidelines, and to the extent\npermitted by national legislation, CASPs may apply SDD measures, which may include:\n\na) for customers subject to a statutory licensing and regulatory regime in the\nEU or in a non-EU country, verifying identity based on evidence of the cus-tomer being subject to that regime, for example through a search of the reg-ulator’s public register;\n\nb) updating CDD information, data or documentation only if there are specific\ntrigger events, such as the customer requesting a new or higher risk product,\nor changes in the customer’s behaviour or transaction profile that suggest\nthat the risk associated with the relationship is no longer low, while observ-ing any update periods set out in the national legislation;\n\nc) lowering the frequency of transaction monitoring for products involving re-curring transactions.\n\nRecord keeping"
+      },
+      {
+        "n": 6,
+        "type": "passage",
+        "citation": "EBA/GL/2024/01, para 26, p.18",
+        "doc_id": "eba_gl_2024_01",
+        "reference": "EBA/GL/2024/01",
+        "language": "en",
+        "score": 0.547,
+        "text": "26. Guideline 9.17 is replaced by the following:\n\n‘9.17 Where a bank has determined, based on its ML/TF risk assessment carried out in keeping\nwith these Guidelines, that the level of the ML/TF risk associated with the business relation-ship is high, it should apply the EDD measures set out in Article 18 of Directive (EU) 2015/849\nas appropriate.’"
+      },
+      {
+        "n": 7,
+        "type": "passage",
+        "citation": "AuA GwG, 7.2 (part 1), p.73",
+        "doc_id": "bafin_aua_gwg",
+        "reference": "AuA GwG",
+        "language": "de",
+        "score": 0.543,
+        "text": "7.2 Drittstaaten mit hohem Risiko, § 15 Abs. 3 Nr. 2 GwG und § 15 Abs. 5 und 5a GwG\n§ 15 Abs. 5 GwG umschreibt ein Mindestmaß an verstärkten Sorgfaltspflichten, welches in den Fällen des\n§ 15 Abs. 3 Nr. 2 GwG zu erfüllen ist. Je nach dem Grad des erhöhten Risikos im Einzelfall können auch weitere\nSorgfaltspflichten erforderlich sein.\nIn den Ziffern 4.53 ff. der Leitlinien zu Risikofaktoren finden sich zusätzliche Hinweise zum Umgang mit\nHochrisikostaaten und zu möglichen zusätzlichen Sorgfaltspflichten.\nEin höheres Risiko liegt gemäß § 15 Abs. 3 Nr. 2 GwG vor, wenn es sich um eine Geschäftsbeziehung oder\nTransaktion handelt, an der ein von der Europäischen Kommission nach dem geänderten Art. 9 der Vierten\nGeldwäscherichtlinie ermittelter Drittstaat mit hohem Risiko oder eine in diesem Drittstaat ansässige\nnatürliche oder juristische Person beteiligt ist.\nDies gilt nicht für Zweigstellen von in der Europäischen Union niedergelassenen Verpflichteten gemäß dem\ngeänderten Art. 2 Abs. 1 der Vierten Geldwäscherichtlinie und für mehrheitlich im Besitz dieser Verpflichteten\nbefindliche Tochterunternehmen, die ihren Standort in einem Drittstaat mit hohem Risiko haben, sofern sie\nsich uneingeschränkt an die von ihnen anzuwendenden gruppenweiten Strategien und Verfahren nach\nArt. 45 Abs. 1 der Vierten Geldwäscherichtlinie halten.\n§ 15 Abs. 5 Nr. 1 GwG sieht in diesen Fällen die Einholung bestimmter Informationen vor."
+      },
+      {
+        "n": 8,
+        "type": "passage",
+        "citation": "AuA GwG, 7.1 (part 3), p.72",
+        "doc_id": "bafin_aua_gwg",
+        "reference": "AuA GwG",
+        "language": "de",
+        "score": 0.531,
+        "text": "Vielmehr ist das Institut gerade auch dann verpflichtet einem Geldwäscherisiko bei der Annahme von\nZahlungen von Debitoren zu begegnen, wenn keine vertieften Kenntnisse über den Debitor vorliegen.\nIn diesem Fall muss das Factoring-Institut in besonderem Maße auf erkennbare erhöhte Risiken achten\nund aus einer entsprechenden umfassenden Risikoanalyse angemessene Maßnahmen ableiten.\nGemäß § 15 Abs. 4 GwG ist ein Mindestmaß an verstärkten Sorgfaltspflichten in den Fällen des\n§ 15 Abs. 3 Nr. 1 GwG zu erfüllen. Je nach dem Grad des erhöhten Risikos im Einzelfall können auch weitere\nSorgfaltspflichten erforderlich sein. In den Ziffern 4.48 ff. der Leitlinien zu Risikofaktoren finden sich\nentsprechende Hinweise in Bezug auf PePs.\nDie\nBegründung oder Fortführung einer Geschäftsbeziehung mit\neiner PeP\nbedarf gemäß\n§ 15 Abs. 4 Nr. 1 GwG der Zustimmung eines Mitglieds der Führungsebene. Wenn der Vertragspartner oder\nder/die wirtschaftlich Berechtigte erst im Laufe einer Geschäftsbeziehung ein hochrangiges wichtiges\nöffentliches Amt auszuüben begonnen hat oder der Verpflichtete erst nach Begründung einer\nGeschäftsbeziehung von der Ausübung eines hochrangigen wichtigen öffentlichen Amts Kenntnis erlangt, so\nhat der Verpflichtete gemäß § 15 Abs. 4 S. 2 GwG sicherzustellen, dass die Fortführung der Geschäftsbeziehung\nnur mit Zustimmung eines Mitglieds der Führungsebene erfolgt.\nNach § 15 Abs. 4 Satz 1 Nr. 2 GwG sind bei PePs zudem angemessene Maßnahmen zu ergreifen, mit denen"
+      },
+      {
+        "n": 9,
+        "type": "passage",
+        "citation": "AuA GwG, 6.2 (part 3), p.71",
+        "doc_id": "bafin_aua_gwg",
+        "reference": "AuA GwG",
+        "language": "de",
+        "score": 0.531,
+        "text": "ein höheres Risiko der Geldwäsche oder Terrorismusfinanzierung bestehen kann. Die Verpflichteten\nbestimmen den konkreten Umfang der zu ergreifenden Maßnahmen entsprechend dem jeweiligen höheren\nRisiko.\nVerstärkte Sorgfaltspflichten sind zusätzlich zu den allgemeinen Sorgfaltspflichten gemäß § 10 GwG zu\nerfüllen. Aufgrund der Bezugnahme auf § 10 Abs. 2 Satz 4 GwG müssen die Verpflichteten in der Lage sein,\nder BaFin bei Bedarf Rechenschaft über die Angemessenheit ihrer Maßnahmen ablegen zu können.\n§ 15 Abs. 2 GwG stellt eine Generalklausel dar, die auch bei in § 15 Abs. 3 GwG nicht genannten Fallkonstellationen, in denen ein höheres Risiko vorliegt, von den Verpflichteten angemessene verstärkte Sorgfaltspflichten\nverlangt. Maßstab ist dabei gemäß § 15 Abs. 2 Satz 1 GwG die von den Verpflichteten durchzuführende\nRisikoanalyse sowie sonstige Bewertungen im Einzelfall. Es hängt von dem Ergebnis der Risikoanalyse oder\nder Bewertung der Verpflichteten ab, ob, und wenn ja, welche verstärkten Sorgfaltspflichten von ihnen\nanzuwenden sind."
+      },
+      {
+        "n": 10,
+        "type": "passage",
+        "citation": "AuA GwG, 5.6 (part 2), p.66",
+        "doc_id": "bafin_aua_gwg",
+        "reference": "AuA GwG",
+        "language": "de",
+        "score": 0.531,
+        "text": "Gemäß § 10 Abs. 2 Satz 3 GwG haben die Verpflichteten bei der Bewertung der Risiken darüber hinaus\nzumindest zu berücksichtigen:\nNr. 1\nden Zweck des Kontos oder der Geschäftsbeziehung,\nNr. 2\ndie Höhe der von den Kunden eingezahlten Vermögenswerte oder den Umfang der ausgeführten\nTransaktionen sowie\nNr. 3\ndie Regelmäßigkeit oder die Dauer der Geschäftsbeziehung.\nDie transaktionsbezogenen Sorgfaltspflichten gegenüber den Gelegenheitskunden umfassen die Identifizierung des Vertragspartners sowie ggf. die Abklärung des/der etwaigen wirtschaftlich Berechtigten. Die\nÜberwachungspflicht nach § 10 Abs. 1 Nr. 5 GwG wird nicht ausgelöst, da sich diese begrifflich allein auf\nGeschäftsbeziehungen bezieht.\nIn bestimmten Ausnahmefällen wird die Erfüllung der Sorgfaltspflichten aufgrund der Natur der Transaktion\nbzw. der besonderen Umstände nicht in der gleichen Weise möglich sein wie bei der Begründung einer\nGeschäftsbeziehung. Die Prozesse zur Erfüllung der Sorgfaltspflichten sind in diesen Ausnahmefällen unter\nrisikoorientierten Gesichtspunkten an die Besonderheiten anzupassen. Dies kann im Einzelfall durch\nrisikoorientierte Ausgestaltung des Verifizierungsprozesses bei juristischen Personen (=>angemessene\nBerücksichtigung der Umstände bei Rückgriff auf gleichwertige beweiskräftige Dokumente) geschehen. In\njedem Fall ist die Begründung der Vorgehensweise zu dokumentieren (Darlegungspflicht gemäß\n§ 10 Abs. 2 Satz 4 GwG)."
+      }
+    ],
+    "tokens": 14279,
+    "seconds": 103.3,
+    "run_at": "2026-10-21 13:03"
+  },
+  "H2": {
+    "question": "Which document amended the EBA ML/TF Risk Factors Guidelines, and what does it say about crypto-asset service providers?",
+    "category": "chained",
+    "answer": "The **EBA Guidelines amending the ML/TF Risk Factors Guidelines (EBA/GL/2024/01)** are the document that updates the original “ML/TF Risk Factors Guidelines” [EBA/GL/2024/01][1].\n\n**What the amendment says about crypto‑asset service providers (CASPs):**\n\n* **Scope of compliance** – CASPs that offer crypto‑asset services must follow the general provisions of Title I of the Guidelines and, where relevant, the sector‑specific rules introduced in Title II [1].\n\n* **New sectoral guideline** – The amendment inserts “Guideline 21: Sectoral Guideline for crypto‑asset services providers (CASPs)” as a dedicated part of the risk‑factor framework [2].\n\n* **Risk‑factor specifics** – Paragraph 21.6 (part 2) lists situations that affect the risk assessment, e.g. when a customer exchanges crypto‑assets and the source or destination is a crypto‑asset account or distributed‑ledger address hosted by a CASP (or another provider) that is regulated under Regulation (EU) 2023/1114 and subject to AML/CFT standards comparable to Directive 2015/849. Such arrangements can be treated as low‑risk if the provider is whitelisted or otherwise deemed low risk [3].\n\n* **Risk‑reduction factor** – Paragraph 21.8 states that the risk may be reduced when transfers involve crypto‑asset accounts or addresses hosted by a CASP (or a non‑CASP provider) that is regulated under Regulation (EU) 2023/1114 and located in a jurisdiction with low ML/TF risk [4].\n\nIn summary, the 2024 amendment introduces a dedicated sectoral guideline for CASPs, requires them to comply with both the general and sector‑specific provisions, and provides detailed risk‑factor rules that can lower the assessed ML/TF risk for transactions involving regulated crypto‑asset service providers.",
+    "trace": [
+      {
+        "step": 1,
+        "tool": "search_documents",
+        "args": {
+          "doc_ids": [
+            "eba_gl_2024_01"
+          ],
+          "language": "en",
+          "query": "crypto-asset service providers"
+        },
+        "result": "4 passages",
+        "sources": [
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    ],
+    "tools_used": [
+      "search_documents"
+    ],
+    "tool_calls": 1,
+    "routing_ok": false,
+    "cited_docs": [
+      "eba_gl_2024_01"
+    ],
+    "expected_docs": [
+      "eba_gl_2024_01"
+    ],
+    "faithfulness": 0.83,
+    "flags": [
+      {
+        "claim": "EBA/GL/2024/01 updates the original ML/TF Risk Factors Guidelines",
+        "cited": [
+          1
+        ],
+        "verdict": "partially_supported",
+        "reason": "Source is the amendment itself but does not explicitly state it updates the original guidelines"
+      }
+    ],
+    "sources": [
+      {
+        "n": 1,
+        "type": "passage",
+        "citation": "EBA/GL/2024/01, para 21.2, p.20",
+        "doc_id": "eba_gl_2024_01",
+        "reference": "EBA/GL/2024/01",
+        "language": "en",
+        "score": 0.503,
+        "text": "21.2. When offering crypto-asset services, CASPs should comply with provisions in Title I as\nwell as sector-specific provisions set out in Title II where these are relevant to the CASP’s\nproduct offering.\n\nRisk factors\nProduct, services and transaction risk factors"
+      },
+      {
+        "n": 2,
+        "type": "passage",
+        "citation": "EBA/GL/2024/01, para 35, p.20",
+        "doc_id": "eba_gl_2024_01",
+        "reference": "EBA/GL/2024/01",
+        "language": "en",
+        "score": 0.475,
+        "text": "35. The following Guideline 21 is inserted:\n(xii) ‘Guideline 21: Sectoral Guideline for crypto-asset services providers\n(CASPs)"
+      },
+      {
+        "n": 3,
+        "type": "passage",
+        "citation": "EBA/GL/2024/01, para 21.6 (part 2), p.26",
+        "doc_id": "eba_gl_2024_01",
+        "reference": "EBA/GL/2024/01",
+        "language": "en",
+        "score": 0.445,
+        "text": "d) the customer requests an exchange and either the source or destination of\nthe crypto-asset is the customer’s own crypto-asset account or a distributed\nledger address, which is hosted either by a CASP regulated under Regulation\n(EU) 2023/1114 or by a provider of crypto-assets services, other than a CASP,\nregulated under Regulation (EU) 2023/1114, which is regulated and super-vised outside the EU under the regulatory framework that is as robust as that\nenvisaged in Regulation (EU) 2023/1114 and, which is subject to AML/CFT\nrequirements as robust as those envisaged in Directive (EU) 2015/849, that\nhas been whitelisted or otherwise determined by the CASP as low risk;\n\ne) the customer requests an exchange and either the source or destination of\nthe crypto-asset relates to low value payments for goods and services\nto/from a crypto-asset account or a distributed ledger address on which\nthere is no adverse information available;\n\nf) the customer transfers between two CASPs or a CASP and a crypto-asset\nservice provider, other than a CASP, regulated under Regulation (EU)\n2023/1114, which is either subject to regulation and supervision within the\nEU or is otherwise subject to a regulatory framework that is as robust as\nthat envisaged in Regulation (EU) 2023/1114 and, which is subject to\nAML/CFT requirements as robust as those envisaged in Directive (EU)\n2015/849.\n\nCountry or geographical risk factors"
+      },
+      {
+        "n": 4,
+        "type": "passage",
+        "citation": "EBA/GL/2024/01, para 21.8, p.28",
+        "doc_id": "eba_gl_2024_01",
+        "reference": "EBA/GL/2024/01",
+        "language": "en",
+        "score": 0.435,
+        "text": "21.8. The factor that may contribute to reducing risk:\n\na) where the transfer comes from or is sent to a crypto-asset account or a dis-tributed ledger address that is hosted by a CASP or a crypto-assets services\nprovider other than a CASP, regulated under Regulation (EU) 2023/1114, in\na jurisdiction associated with low levels of the ML/TF risk.\n\nDistribution channel risk factors"
+      }
+    ],
+    "tokens": 6254,
+    "seconds": 44.6,
+    "run_at": "2026-10-21 13:03"
+  },
+  "H3": {
+    "question": "Compare the EBA and BaFin requirements on outsourcing.",
+    "category": "chained",
+    "answer": "**Comparison of EBA (EU) and BaFin (Germany) outsourcing requirements**\n\n| Aspect | EBA – *Guidelines on outsourcing arrangements* (GL 2019/02) | BaFin – *Rundschreiben 06/2026 (MaRisk)* |\n|--------|------------------------------------------------------------|------------------------------------------|\n| **Definition & Scope** | Outsourcing is any transfer of activities to a third‑party service provider; the guidelines apply to “critical or important functions” as well as other outsourcing arrangements. | Outsourcing (Auslagerung) is defined as the engagement of another company to perform activities and processes that would otherwise be performed by the institution itself. Occasional or one‑off procurement of goods/services is **not** considered outsourcing. [6] |\n| **Policy differentiation** | Institutions must adopt an outsourcing policy that distinguishes: <br>‑ critical/important vs. other functions <br>‑ authorised vs. non‑authorised providers <br>‑ intra‑group vs. external arrangements <br>‑ providers located in the EU vs. third countries. [1] | The BaFin circular does not prescribe a formal policy matrix, but it stresses that any outsourcing must not impair the proper organisation of the business under § 25a Abs. 1 KWG. [7] |\n| **Responsibility & accountability** | The outsourcing cannot delegate the management body’s responsibilities; the institution remains fully accountable for all regulatory obligations, including oversight of critical/important functions. [4] | Likewise, outsourcing must not lead to a delegation of the management board’s responsibilities. The management body retains ultimate responsibility; internal audit may waive its own testing only if other adequate controls are in place. [7] |\n| **Sub‑outsourcing (sub‑contracting)** | The outsourcing agreement must state whether sub‑outsourcing of critical/important functions (or material parts) is permitted. [2] | The contract must contain “approval reservations” in favour of the outsourcing institution and ensure that any sub‑outsourcing by the service provider complies with the original outsourcing agreement and includes an information‑obligation to the institution. [5] |\n| **Governance & oversight** | Institutions must have sufficient competence, skilled resources and an oversight framework to monitor outsourcing arrangements. [3] | The institution must verify that the outsourcing does not compromise the adequacy of its organisational structure; it must regularly check that the service provider remains reportable, especially after any sub‑outsourcing. [5][8] |\n| **Control‑area & core‑banking functions** | Critical functions may be outsourced only if the institution can still ensure effective monitoring and can continue the function on termination. [35‑43] (implicit in the above passages) | Outsourcing of activities in control areas (risk‑control, compliance, internal audit) is permissible only if the institution can guarantee effective supervision and continuity after termination. Full outsourcing of these functions is allowed for subsidiaries that are not “essential” for the national financial sector. [8] |\n| **Contractual requirements** | The agreement must specify the scope, rights to audit, data protection, exit provisions and, where relevant, sub‑outsourcing permissions. [2][4] | The agreement must contain explicit consent clauses for further sub‑outsourcing, information duties of the service provider, and safeguards that the sub‑outsourcing aligns with the original contract. [5] |\n| **Regulatory reference** | EBA GL 2019/02 (EU level) – applies to all credit institutions and payment institutions in the EU. | BaFin Rundschreiben 06/2026 (MaRisk) – national implementation of the KWG and CRR requirements for German institutions. |\n\n### Key take‑aways\n\n*Both regulators stress that outsourcing does **not** relieve the institution of ultimate responsibility.*  \n*EBA provides a more detailed policy‑framework (critical vs. non‑critical, EU vs. third‑country, intra‑group) and explicit wording on sub‑outsourcing permissions.*  \n*BaFin focuses on ensuring that outsourcing does not impair the “Ordnungsmäßigkeit” of the business organisation, requires explicit contractual approval reservations for sub‑outsourcing, and adds specific guidance on outsourcing of control‑area functions within German supervisory law.*  \n\n**Sources**: EBA passages [1]–[4]; BaFin passages [5]–[8].",
+    "trace": [
+      {
+        "step": 1,
+        "tool": "search_documents",
+        "args": {
+          "doc_ids": [
+            "eba_gl_2019_02"
+          ],
+          "language": "en",
+          "query": "outsourcing"
+        },
+        "result": "4 passages",
+        "sources": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "step": 2,
+        "tool": "search_documents",
+        "args": {
+          "doc_ids": [
+            "bafin_rs_06_2026"
+          ],
+          "language": "de",
+          "query": "Outsourcing"
+        },
+        "result": "4 passages",
+        "sources": [
+          5,
+          6,
+          7,
+          8
+        ]
+      }
+    ],
+    "tools_used": [
+      "search_documents",
+      "search_documents"
+    ],
+    "tool_calls": 2,
+    "routing_ok": false,
+    "cited_docs": [
+      "bafin_rs_06_2026",
+      "eba_gl_2019_02"
+    ],
+    "expected_docs": [
+      "eba_gl_2019_02",
+      "bafin_rs_06_2026"
+    ],
+    "faithfulness": 0.9,
+    "flags": [
+      {
+        "claim": "EBA allows outsourcing of critical functions only if the institution can ensure effective monitoring and can continue the function after termination of the contract.",
+        "cited": [
+          4
+        ],
+        "verdict": "partially_supported",
+        "reason": "Source [4] states responsibilities cannot be delegated but does not explicitly mention the ability to continue the function after termination."
+      }
+    ],
+    "sources": [
+      {
+        "n": 1,
+        "type": "passage",
+        "citation": "EBA/GL/2019/02, para 43, p.34",
+        "doc_id": "eba_gl_2019_02",
+        "reference": "EBA/GL/2019/02",
+        "language": "en",
+        "score": 0.488,
+        "text": "43. The outsourcing policy should differentiate between the following:\na. outsourcing of critical or important functions and other outsourcing arrangements;\nb. outsourcing to service providers that are authorised by a competent authority and\nthose that are not;\nc. intragroup outsourcing arrangements, outsourcing arrangements within the same\ninstitutional protection scheme (including entities fully owned individually or\ncollectively by institutions within the institutional protection scheme) and outsourcing\nto entities outside the group; and\nd. outsourcing to service providers located within a Member State and third countries."
+      },
+      {
+        "n": 2,
+        "type": "passage",
+        "citation": "EBA/GL/2019/02, para 76, p.45",
+        "doc_id": "eba_gl_2019_02",
+        "reference": "EBA/GL/2019/02",
+        "language": "en",
+        "score": 0.481,
+        "text": "76. The outsourcing agreement should specify whether or not sub-outsourcing of critical or\nimportant functions, or material parts thereof, is permitted."
+      },
+      {
+        "n": 3,
+        "type": "passage",
+        "citation": "EBA/GL/2019/02, para 37, p.31",
+        "doc_id": "eba_gl_2019_02",
+        "reference": "EBA/GL/2019/02",
+        "language": "en",
+        "score": 0.465,
+        "text": "37. Outsourcing should not lower the suitability requirements applied to the members of an\ninstitution’s management body, directors and persons responsible for the management of the\npayment institution and key function holders. Institutions and payment institutions should\nhave adequate competence and sufficient and appropriately skilled resources to ensure\nappropriate management and oversight of outsourcing arrangements."
+      },
+      {
+        "n": 4,
+        "type": "passage",
+        "citation": "EBA/GL/2019/02, para 35, p.30",
+        "doc_id": "eba_gl_2019_02",
+        "reference": "EBA/GL/2019/02",
+        "language": "en",
+        "score": 0.464,
+        "text": "35. The outsourcing of functions cannot result in the delegation of the management body’s\nresponsibilities. Institutions and payment institutions remain fully responsible and accountable\nfor complying with all of their regulatory obligations, including the ability to oversee the\noutsourcing of critical or important functions."
+      },
+      {
+        "n": 5,
+        "type": "passage",
+        "citation": "Rundschreiben 06/2026 (BA), AT 9 Tz. 8, p.37",
+        "doc_id": "bafin_rs_06_2026",
+        "reference": "Rundschreiben 06/2026 (BA)",
+        "language": "de",
+        "score": 0.392,
+        "text": "8\nMit Blick auf Weiterverlagerungen sind im Auslagerungsvertrag möglichst Zustimmungsvorbehalte zugunsten des auslagernden Instituts oder konkrete Voraussetzungen zu vereinbaren, wann Weiterverlagerungen einzelner Arbeits- und Prozessschritte\nmöglich sind. Zumindest ist vertraglich sicherzustellen, dass Vereinbarungen des Auslagerungsunternehmens mit Subunternehmen im Einklang mit dem originären Auslagerungsvertrag stehen. Ferner haben die vertraglichen Anforderungen bei Weiterverlagerungen auch eine Informationspflicht des Auslagerungsunternehmens an das auslagernde Institut zu umfassen. Es muss sichergestellt sein, dass das Auslagerungsunternehmen im Falle einer Weiterverlagerung auf ein Subunternehmen weiterhin gegenüber dem auslagernden Institut berichtspflichtig bleibt."
+      },
+      {
+        "n": 6,
+        "type": "passage",
+        "citation": "Rundschreiben 06/2026 (BA), AT 9 Tz. 1 (part 1), p.34",
+        "doc_id": "bafin_rs_06_2026",
+        "reference": "Rundschreiben 06/2026 (BA)",
+        "language": "de",
+        "score": 0.381,
+        "text": "AT 9 Auslagerung\n1\nEine Auslagerung liegt vor, wenn ein anderes Unternehmen mit der Wahrnehmung\nvon Aktivitäten und Prozessen im Zusammenhang mit der Durchführung von Bankgeschäften, Finanzdienstleistungen oder sonstigen institutstypischen Dienstleistungen\nbeauftragt wird, die ansonsten vom Institut selbst erbracht würden. Zivilrechtliche Gestaltungen und Vereinbarungen können dabei das Vorliegen einer Auslagerung nicht\nvon vornherein ausschließen.\nSonstiger Fremdbezug von Leistungen\nNicht als Auslagerung zu qualifizieren ist der sonstige Fremdbezug von Leistungen.\nHierzu zählt zunächst der einmalige oder gelegentliche Fremdbezug von Gütern und\nDienstleistungen. Ebenso erfasst werden Leistungen, die typischerweise von einem beaufsichtigten Unternehmen bezogen werden und aufgrund tatsächlicher Gegebenheiten oder rechtlicher Vorgaben regelmäßig weder zum Zeitpunkt des Fremdbezugs\nnoch in der Zukunft vom Institut selbst erbracht werden können. Dessen ungeachtet\nmuss das Institut auch beim sonstigen Fremdbezug von Leistungen darauf achten,\ndass die Ordnungsmäßigkeit der Geschäftsorganisation gemäß § 25a Abs. 1 KWG nicht\nbeeinträchtigt wird.\nDORA (Verordnung (EU) 2022/2554)\nAusgelagerte oder fremdbezogene IKT-Dienstleistungen gemäß Art. 3 Nr. 21 DORA, die\ndem IKT-Drittparteienrisikomanagement gemäß Art. 28-30 DORA unterliegen, fallen\nnicht in den Anwendungsbereich des AT 9.\nPflichten im Hinblick auf Geldwäscheprävention"
+      },
+      {
+        "n": 7,
+        "type": "passage",
+        "citation": "Rundschreiben 06/2026 (BA), AT 9 Tz. 4 (part 1), p.35",
+        "doc_id": "bafin_rs_06_2026",
+        "reference": "Rundschreiben 06/2026 (BA)",
+        "language": "de",
+        "score": 0.352,
+        "text": "4\nGrundsätzlich dürfen Aktivitäten und Prozesse ausgelagert werden, solange dadurch\ndie Ordnungsmäßigkeit der Geschäftsorganisation gemäß § 25a Abs. 1 KWG nicht beeinträchtigt wird (z.B. keine Empty Shell). Die Auslagerung führt nicht zu einer Delegation der Verantwortung der Geschäftsleitung an das Auslagerungsunternehmen. Die\nLeitungsaufgaben der Geschäftsleitung dürfen nicht ausgelagert werden. Die Interne\nRevision des Instituts kann im Fall von Auslagerungen auf eigene Prüfungshandlungen\nverzichten, sofern anderweitig eine Revisionstätigkeit durchgeführt wird, die den aufsichtlichen Anforderungen genügt, und die relevanten Prüfungsergebnisse weitergegeben werden. Die Interne Revision des auslagernden Instituts muss sich regelmäßig von\nder Einhaltung dieser Voraussetzungen überzeugen. Besondere Maßstäbe für Auslagerungsmaßnahmen ergeben sich bei der vollständigen oder teilweisen Auslagerung der\nbesonderen Funktionen Risikocontrolling-Funktion, Compliance-Funktion und Interne\nRevision. Spezialgesetzliche Regelungen sind zu beachten.\nBefugnis der Leistungserbringung des Auslagerungsunternehmens\nDas Institut darf Aktivitäten und Prozesse nur an ein Auslagerungsunternehmen auslagern, das nach dem Recht seines Sitzlandes zur Ausübung der ausgelagerten Aktivitäten und Prozesse befugt ist.\nAnderweitige Durchführung der Revisionstätigkeit\nDie Revisionstätigkeit kann übernommen werden durch:\n-\ndie Interne Revision des Auslagerungsunternehmens,\n-"
+      },
+      {
+        "n": 8,
+        "type": "passage",
+        "citation": "Rundschreiben 06/2026 (BA), AT 9 Tz. 5, p.35",
+        "doc_id": "bafin_rs_06_2026",
+        "reference": "Rundschreiben 06/2026 (BA)",
+        "language": "de",
+        "score": 0.33,
+        "text": "5\nEine Auslagerung von Aktivitäten und Prozessen in Kontrollbereichen und Kernbankbereichen kann unter Beachtung der in Tz. 4 genannten Anforderungen in einem Umfang\nvorgenommen werden, der gewährleistet, dass eine wirksame Überwachung der vom\nAuslagerungsunternehmen erbrachten Dienstleistungen gewährleistet ist. Es ist sicherzustellen, dass bei Bedarf – z.B. im Falle der Beendigung des Auslagerungsverhältnisses - der ordnungsmäßige Betrieb in diesen Bereichen fortgesetzt werden kann. Eine\nvollständige Auslagerung der Risikocontrolling-Funktion, Compliance-Funktion oder\nInternen Revision ist für Tochterinstitute innerhalb einer Institutsgruppe zulässig, sofern das auslagernde Institut sowohl nach Größe, Komplexität und Risikogehalt der\nGeschäftsaktivitäten für den nationalen Finanzsektor als auch hinsichtlich seiner Bedeutung innerhalb der Gruppe als nicht wesentlich einzustufen ist. Gleiches gilt für\nGruppen, wenn das Mutterunternehmen kein Institut und im Inland ansässig ist. Eine\nvollständige Auslagerung der Compliance-Funktion oder der Internen Revision ist ferner bei sehr kleinen Instituten möglich."
+      }
+    ],
+    "tokens": 10774,
+    "seconds": 59.7,
+    "run_at": "2026-10-21 13:04"
+  },
+  "N1": {
+    "question": "Which EBA guideline does Rundschreiben 14/2026 adopt, and what does that guideline require?",
+    "category": "not_in_corpus",
+    "answer": "Rundschreiben 14/2026 (BaFin) **adopts the EBA Guidelines EBA/GL/2026/01** [1].  \n\nThe adopted guideline, in line with other EBA guidelines, **creates compliance and reporting obligations**: it sets out the EBA’s view of appropriate supervisory practice and requires competent authorities and financial institutions to “make every effort to comply” and to incorporate the guidelines into their own legal frameworks or supervisory processes [3][2].",
+    "trace": [
+      {
+        "step": 1,
+        "tool": "query_documents",
+        "args": {
+          "issuer": "BaFin",
+          "reference": "14/2026"
+        },
+        "result": "1 documents",
+        "sources": [
+          1
+        ]
+      },
+      {
+        "step": 2,
+        "tool": "search_documents",
+        "args": {
+          "doc_ids": [
+            "eba_gl_2024_01"
+          ],
+          "query": "EBA/GL/2026/01"
+        },
+        "result": "4 passages",
+        "sources": [
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "step": 3,
+        "tool": "query_documents",
+        "args": {
+          "issuer": "EBA",
+          "reference": "2026/01"
+        },
+        "result": "0 documents",
+        "sources": []
+      },
+      {
+        "step": 4,
+        "tool": "search_documents",
+        "args": {
+          "query": "EBA/GL/2026/01"
+        },
+        "result": "4 passages",
+        "sources": [
+          6,
+          2,
+          3,
+          7
+        ]
+      }
+    ],
+    "tools_used": [
+      "query_documents",
+      "search_documents",
+      "query_documents",
+      "search_documents"
+    ],
+    "tool_calls": 4,
+    "routing_ok": true,
+    "cited_docs": [
+      "bafin_rs_14_2026",
+      "eba_gl_2024_01"
+    ],
+    "expected_docs": [
+      "bafin_rs_14_2026"
+    ],
+    "faithfulness": 0.7,
+    "flags": [
+      {
+        "claim": "The adopted guideline creates compliance and reporting obligations",
+        "cited": [
+          3,
+          2
+        ],
+        "verdict": "partially_supported",
+        "reason": "Guideline 2024/01 mentions compliance obligations, but the source is a different year and [2] does not address obligations."
+      },
+      {
+        "claim": "The guideline sets out the EBA’s view of appropriate supervisory practice",
+        "cited": [
+          3,
+          2
+        ],
+        "verdict": "partially_supported",
+        "reason": "Guidelines generally describe supervisory practice, but the cited paragraphs do not explicitly phrase it this way."
+      },
+      {
+        "claim": "The guideline requires them to incorporate the guidelines into their own legal frameworks or supervisory processes",
+        "cited": [
+          3,
+          2
+        ],
+        "verdict": "partially_supported",
+        "reason": "The source obliges effort to comply but does not explicitly mention incorporation into legal frameworks."
+      }
+    ],
+    "sources": [
+      {
+        "n": 1,
+        "type": "catalogue",
+        "citation": "Catalogue entry: Rundschreiben 14/2026 (BA)",
+        "doc_id": "bafin_rs_14_2026",
+        "reference": "Rundschreiben 14/2026 (BA)",
+        "url": null,
+        "text": "Leitlinien zur Festlegung der Kriterien für die Ermittlung der Tätigkeiten gemäß Art. 4 Abs. 1 Nr. 18 CRR (BaFin, de, 2026-10-05, topics: ancillary_services)"
+      },
+      {
+        "n": 2,
+        "type": "passage",
+        "citation": "EBA/GL/2024/01, para 4, p.11",
+        "doc_id": "eba_gl_2024_01",
+        "reference": "EBA/GL/2024/01",
+        "language": "en",
+        "score": 0.524,
+        "text": "4. Notifications will be published on the EBA website, in line with Article 16 (3).\n1 Regulation (EU) No 1093/2010 of the European Parliament and of the Council of 24 November 2010 establishing a\nEuropean Supervisory Authority (European Banking Authority), amending Decision No 716/2009/EC and repealing\nCommission Decision 2009/78/EC, (OJ L 331, 15.12.2010, p.12).\n2. Subject matter, scope and definitions\nAddressees"
+      },
+      {
+        "n": 3,
+        "type": "passage",
+        "citation": "EBA/GL/2024/01, para 1, p.11",
+        "doc_id": "eba_gl_2024_01",
+        "reference": "EBA/GL/2024/01",
+        "language": "en",
+        "score": 0.524,
+        "text": "1. Compliance and reporting obligations\nStatus of these Guidelines\n1. This document contains Guidelines issued pursuant to Article 16 of Regulation (EU) No\n1093/20101. In accordance with Article 16 (3) of Regulation (EU) No 1093/2010, competent\nauthorities and financial institutions must make every effort to comply with the Guidelines."
+      },
+      {
+        "n": 4,
+        "type": "passage",
+        "citation": "EBA/GL/2024/01, para 6–7, p.13",
+        "doc_id": "eba_gl_2024_01",
+        "reference": "EBA/GL/2024/01",
+        "language": "en",
+        "score": 0.506,
+        "text": "6. These Guidelines apply from 30 December 2024.\n4. Amendments\n(i) Amendment to the title of the Guidelines\n7. The title of the Guidelines is replaced by the following:\n\n‘Guidelines EBA/2021/02 on customer due diligence and the factors credit and financial insti-tutions should consider when assessing the money laundering and terrorist financing risk as-sociated with individual business relationships and occasional transactions (‘The ML/TF Risk\nFactors Guidelines’) under Directive (EU) 2015/849’\n\n(ii) Amendments to subject matter, scope and definitions"
+      },
+      {
+        "n": 5,
+        "type": "passage",
+        "citation": "EBA/GL/2024/01, para 2, p.11",
+        "doc_id": "eba_gl_2024_01",
+        "reference": "EBA/GL/2024/01",
+        "language": "en",
+        "score": 0.504,
+        "text": "2. Guidelines set the EBA’s view of appropriate supervisory practices within the European System\nof Financial Supervision or of how EU law should be applied in a particular area. Competent\nauthorities, as defined in Article 4 (2) of Regulation (EU) No 1093/2010 to whom guidelines\napply, should comply by incorporating them into their practices as appropriate (e.g. by\namending their legal framework or their supervisory processes), including where guidelines are\nprimarily directed at institutions.\nReporting requirements"
+      },
+      {
+        "n": 6,
+        "type": "passage",
+        "citation": "EBA/GL/2021/02, para 1.32 (part 24), p.26",
+        "doc_id": "eba_gl_2021_02",
+        "reference": "EBA/GL/2021/02",
+        "language": "en",
+        "score": 0.535,
+        "text": "10 Article 26(2) of Directive (EU) 2015/849\n37\n\nGuideline 3: Assessing ML/TF risk"
+      },
+      {
+        "n": 7,
+        "type": "passage",
+        "citation": "EBA/GL/2020/06, para 271, p.64",
+        "doc_id": "eba_gl_2020_06",
+        "reference": "EBA/GL/2020/06",
+        "language": "en",
+        "score": 0.513,
+        "text": "271.\nThe EWI framework should contain a description of the relevance of the indicators in\nrelation to the characteristics of transactions and borrower types, or for homogeneous groups\nof portfolios, when appropriate."
+      }
+    ],
+    "tokens": 11403,
+    "seconds": 67.4,
+    "run_at": "2026-10-21 13:05"
+  },
+  "N2": {
+    "question": "What does the EU AI Act require for credit scoring models?",
+    "category": "not_in_corpus",
+    "answer": "I’m sorry, but the documents retrieved do not contain information on the specific requirements that the EU AI Act imposes on credit‑scoring models.",
+    "trace": [
+      {
+        "step": 1,
+        "tool": "search_documents",
+        "args": {
+          "doc_ids": [],
+          "language": "en",
+          "query": "EU AI Act credit scoring models requirements"
+        },
+        "result": "4 passages",
+        "sources": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "step": 2,
+        "tool": "search_documents",
+        "args": {
+          "doc_ids": [],
+          "language": "en",
+          "query": "EU AI Act credit scoring"
+        },
+        "result": "4 passages",
+        "sources": [
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "step": 3,
+        "tool": "search_documents",
+        "args": {
+          "doc_ids": [],
+          "language": "en",
+          "query": "EU AI Act"
+        },
+        "result": "4 passages",
+        "sources": [
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      {
+        "step": 4,
+        "tool": "search_documents",
+        "args": {
+          "doc_ids": [],
+          "language": "en",
+          "query": "AI Act credit scoring"
+        },
+        "result": "4 passages",
+        "sources": [
+          5,
+          1,
+          6,
+          4
+        ]
+      }
+    ],
+    "tools_used": [
+      "search_documents",
+      "search_documents",
+      "search_documents",
+      "search_documents"
+    ],
+    "tool_calls": 4,
+    "routing_ok": true,
+    "cited_docs": [],
+    "expected_docs": [],
+    "faithfulness": null,
+    "flags": [
+      {
+        "claim": "Whole answer",
+        "cited": [],
+        "verdict": "unsupported",
+        "reason": "The answer cites no retrieved sources."
+      }
+    ],
+    "sources": [
+      {
+        "n": 1,
+        "type": "passage",
+        "citation": "EBA/GL/2020/06, para 54, p.26",
+        "doc_id": "eba_gl_2020_06",
+        "reference": "EBA/GL/2020/06",
+        "language": "en",
+        "score": 0.624,
+        "text": "54. When using automated models for creditworthiness assessment and credit decision-making,\ninstitutions should understand the models used, and their methodology, input data,\nassumptions, limitations and outputs, and should have in place:\na. internal policies and procedures detecting and preventing bias and ensuring the quality\nof the input data;\nb. measures to ensure the traceability, auditability, and robustness and resilience of the\ninputs and outputs;\nc. internal policies and procedures ensuring that the quality of the model output is\nregularly assessed, using measures appropriate to the model’s use, including\nbacktesting the performance of the model;\nd. control mechanisms, model overrides and escalation procedures within the regular\ncredit decision-making framework, including qualitative approaches, qualitative risk\nassessment tools (including expert judgement and critical analysis) and quantitative\nlimits."
+      },
+      {
+        "n": 2,
+        "type": "passage",
+        "citation": "EBA/GL/2020/06, para 53 (part 1), p.25",
+        "doc_id": "eba_gl_2020_06",
+        "reference": "EBA/GL/2020/06",
+        "language": "en",
+        "score": 0.612,
+        "text": "53. When using technology-enabled innovation for credit-granting purposes, institutions should do\nthe following:\na. Adequately capture, in their risk management and control frameworks, the inherent\nrisks associated with the technology-enabled innovation in use. This should be\ncommensurate with the business model, credit risk exposure, complexity of the\nmethods and the extent of the use of technology-enabled innovation.\nb. Ensure that the management body has a sufficient understanding of the use of\ntechnology-enabled innovation, its limitation and the impact it has on credit-granting\nprocedures.\nc. Understand the underlying models used, including their capabilities, assumptions and\nlimitations, along with ensuring their traceability, auditability, and robustness and\nresilience.\nd. Ensure that the models are fit for purpose, taking into account the identified task and\nother criteria, such as its performance and use. If explanations are required during the\nmodels’ use, then consideration should be given to developing an interpretable model.\ne. Understand the quality of data and inputs to the model and detect and prevent bias in\nthe credit decision-making process, ensuring that appropriate safeguards are in place\nto provide confidentiality, integrity and availability of information and systems.\nf. Ensure the performance of the model, including the validity and quality of its outputs,\nis continuously monitored and appropriate remediation measures are taken in a timely"
+      },
+      {
+        "n": 3,
+        "type": "passage",
+        "citation": "EBA/GL/2020/06, para 55, p.26",
+        "doc_id": "eba_gl_2020_06",
+        "reference": "EBA/GL/2020/06",
+        "language": "en",
+        "score": 0.607,
+        "text": "55. Institutions should have adequate model documentation that covers:\na. methodology, assumptions and data inputs, and an approach to detecting and\npreventing bias and ensuring the quality of input data;\nb. the use of model outputs in the decision-making process and the monitoring of these\nautomated decisions on the overall quality of the portfolio or products in which these\nmodels are used.\n4.3.5 Environmental, social and governance factors"
+      },
+      {
+        "n": 4,
+        "type": "passage",
+        "citation": "EBA/GL/2020/06, para 41, p.23",
+        "doc_id": "eba_gl_2020_06",
+        "reference": "EBA/GL/2020/06",
+        "language": "en",
+        "score": 0.605,
+        "text": "41. In their credit risk policies and procedures dealing with credit decision-making as referred to in\nparagraph 38(a) and creditworthiness assessments as referred to in paragraph 38(d),\ninstitutions should also specify the use of any automated models in the creditworthiness\nassessment and credit decision-making processes in a way that is appropriate to the size, nature\nand complexity of the credit facility and the types of borrowers. In particular, institutions should\nset out appropriate governance arrangements for the design and use of such models and the\nmanagement of the associated model risk, taking into account the criteria set out in\nSection 4.3.4, and for model risk-related aspects of the EBA Guidelines on the supervisory\nreview and evaluation process23."
+      },
+      {
+        "n": 5,
+        "type": "passage",
+        "citation": "EBA/GL/2021/02, para 3.7, p.38",
+        "doc_id": "eba_gl_2021_02",
+        "reference": "EBA/GL/2021/02",
+        "language": "en",
+        "score": 0.559,
+        "text": "3.7. Where a firm uses automated IT systems to allocate overall risk scores to categorise business\nrelationships or occasional transactions and does not develop these in house but purchases\nthem from an external provider, it should understand how the system works and how it\ncombines or weights risk factors to achieve an overall risk score. A firm must always be able\nto satisfy itself that the scores allocated reflect the firm’s understanding of ML/TF risk and it\nshould be able to demonstrate this to the competent authority.\nCategorising risk"
+      },
+      {
+        "n": 6,
+        "type": "passage",
+        "citation": "EBA/GL/2020/06, para 53 (part 2), p.25",
+        "doc_id": "eba_gl_2020_06",
+        "reference": "EBA/GL/2020/06",
+        "language": "en",
+        "score": 0.498,
+        "text": "is continuously monitored and appropriate remediation measures are taken in a timely\nmanner in the case of detected issues (e.g. worsening or deviating from expected\nbehaviour).\n4.3.4 Models for creditworthiness assessment and credit decision-making"
+      },
+      {
+        "n": 7,
+        "type": "passage",
+        "citation": "EBA/GL/2021/02, para 3.4, p.37",
+        "doc_id": "eba_gl_2021_02",
+        "reference": "EBA/GL/2021/02",
+        "language": "en",
+        "score": 0.488,
+        "text": "3.4. When assessing ML/TF risk, firms may decide to weight factors differently depending on their\nrelative importance."
+      },
+      {
+        "n": 8,
+        "type": "passage",
+        "citation": "EBA/GL/2021/02, para 1.32 (part 24), p.26",
+        "doc_id": "eba_gl_2021_02",
+        "reference": "EBA/GL/2021/02",
+        "language": "en",
+        "score": 0.487,
+        "text": "10 Article 26(2) of Directive (EU) 2015/849\n37\n\nGuideline 3: Assessing ML/TF risk"
+      },
+      {
+        "n": 9,
+        "type": "passage",
+        "citation": "EBA/GL/2024/01, para 4, p.11",
+        "doc_id": "eba_gl_2024_01",
+        "reference": "EBA/GL/2024/01",
+        "language": "en",
+        "score": 0.468,
+        "text": "4. Notifications will be published on the EBA website, in line with Article 16 (3).\n1 Regulation (EU) No 1093/2010 of the European Parliament and of the Council of 24 November 2010 establishing a\nEuropean Supervisory Authority (European Banking Authority), amending Decision No 716/2009/EC and repealing\nCommission Decision 2009/78/EC, (OJ L 331, 15.12.2010, p.12).\n2. Subject matter, scope and definitions\nAddressees"
+      },
+      {
+        "n": 10,
+        "type": "passage",
+        "citation": "EBA/GL/2024/01, para 21.10, p.29",
+        "doc_id": "eba_gl_2024_01",
+        "reference": "EBA/GL/2024/01",
+        "language": "en",
+        "score": 0.457,
+        "text": "21.10. The factor that may contribute to reducing risk:\n\na) Where the CASP places reliance on CDD measures applied by a third party in\naccordance with Article 26 of Directive (EU) 2015/849 and where that third\nparty is located in the EU.\n\nMeasures"
+      },
+      {
+        "n": 11,
+        "type": "passage",
+        "citation": "EBA/GL/2019/02, para 31 (part 5), p.27",
+        "doc_id": "eba_gl_2019_02",
+        "reference": "EBA/GL/2019/02",
+        "language": "en",
+        "score": 0.457,
+        "text": "39 Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural\npersons with regard to the processing of personal data and on the free movement of such data, and repealing Directive\n95/46/EC (General Data Protection Regulation).\nTitle III – Governance framework\n5 Sound governance arrangements and third-party risk"
+      },
+      {
+        "n": 12,
+        "type": "passage",
+        "citation": "EBA/GL/2021/02, para 8.22, p.67",
+        "doc_id": "eba_gl_2021_02",
+        "reference": "EBA/GL/2021/02",
+        "language": "en",
+        "score": 0.451,
+        "text": "8.22. To discharge their obligation under Article 18a, firms should ensure that they also apply\nArticle 13 and 19 of Directive (EU) 2015/849."
+      }
+    ],
+    "tokens": 11498,
+    "seconds": 81.4,
+    "run_at": "2026-10-21 13:07"
+  }
+}

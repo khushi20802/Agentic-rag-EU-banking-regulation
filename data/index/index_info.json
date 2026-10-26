@@ -1,0 +1,6 @@
+{
+ "embedding_model": "voyage-4",
+ "dimensions": 1024,
+ "chunks": 1552,
+ "built": "2026-10-21 12:04"
+}

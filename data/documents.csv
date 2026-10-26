@@ -1,0 +1,9 @@
+doc_id,filename,language,issuer,doc_type,reference,title,date,topic,status,amends,adopts,url
+eba_gl_2019_02,en_eba_gl_2019_02_outsourcing.pdf,en,EBA,guideline,EBA/GL/2019/02,Guidelines on outsourcing arrangements,2019-02-25,outsourcing,active,,,
+eba_gl_2020_06,en_eba_gl_2020_06_loan_origination.pdf,en,EBA,guideline,EBA/GL/2020/06,Guidelines on loan origination and monitoring,2020-05-29,credit_risk,active,,,
+eba_gl_2021_02,en_eba_gl_2021_02_mltf_risk_factors.pdf,en,EBA,guideline,EBA/GL/2021/02,ML/TF Risk Factors Guidelines,2021-03-01,aml,active,,,
+eba_gl_2022_15,en_eba_gl_2022_15_remote_onboarding.pdf,en,EBA,guideline,EBA/GL/2022/15,Guidelines on the use of remote customer onboarding solutions,2022-11-22,aml,active,,,
+eba_gl_2024_01,en_eba_gl_2024_01_mltf_amendment.pdf,en,EBA,guideline,EBA/GL/2024/01,Guidelines amending the ML/TF Risk Factors Guidelines,2024-01-16,aml,active,EBA/GL/2021/02,,
+bafin_rs_06_2026,de_bafin_rs_06_2026_marisk.pdf,de,BaFin,circular,Rundschreiben 06/2026 (BA),Mindestanforderungen an das Risikomanagement (MaRisk),2026-06-30,risk_management;outsourcing;credit_risk,active,,,
+bafin_aua_gwg,de_bafin_aua_gwg.pdf,de,BaFin,interpretation_guidance,AuA GwG,Auslegungs- und Anwendungshinweise zum Geldwäschegesetz,2025-07-01,aml,active,,,
+bafin_rs_14_2026,de_bafin_rs_14_2026_crr_ancillary.pdf,de,BaFin,circular,Rundschreiben 14/2026 (BA),Leitlinien zur Festlegung der Kriterien für die Ermittlung der Tätigkeiten gemäß Art. 4 Abs. 1 Nr. 18 CRR,2026-10-05,ancillary_services,active,,EBA/GL/2026/01,

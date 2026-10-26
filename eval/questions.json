@@ -1,0 +1,267 @@
+[
+  {
+    "id": "C1",
+    "category": "catalogue",
+    "question": "Which AML documents were issued after 2022?",
+    "expected_tools": [
+      "query_documents"
+    ],
+    "expected_docs": [
+      "eba_gl_2024_01",
+      "bafin_aua_gwg"
+    ],
+    "key_points": [
+      "EBA/GL/2024/01 (16 Jan 2024)",
+      "AuA GwG (July 2025)",
+      "no other AML documents after 2022"
+    ],
+    "verify": false
+  },
+  {
+    "id": "C2",
+    "category": "catalogue",
+    "question": "Which document amends the EBA ML/TF Risk Factors Guidelines (EBA/GL/2021/02), and when was it issued?",
+    "expected_tools": [
+      "query_documents"
+    ],
+    "expected_docs": [
+      "eba_gl_2024_01"
+    ],
+    "key_points": [
+      "EBA/GL/2024/01",
+      "issued 16 January 2024"
+    ],
+    "verify": false
+  },
+  {
+    "id": "C3",
+    "category": "catalogue",
+    "question": "Which documents in the corpus are in German, and who issued them?",
+    "expected_tools": [
+      "query_documents"
+    ],
+    "expected_docs": [
+      "bafin_rs_06_2026",
+      "bafin_aua_gwg",
+      "bafin_rs_14_2026"
+    ],
+    "key_points": [
+      "MaRisk (Rundschreiben 06/2026)",
+      "AuA GwG",
+      "Rundschreiben 14/2026",
+      "all issued by BaFin"
+    ],
+    "verify": false
+  },
+  {
+    "id": "D1",
+    "category": "content",
+    "question": "What should firms check when onboarding customers remotely by video?",
+    "expected_tools": [
+      "search_documents"
+    ],
+    "expected_docs": [
+      "eba_gl_2022_15"
+    ],
+    "key_points": [
+      "adequate video/audio quality and lighting",
+      "capture at the moment of verification",
+      "liveness detection",
+      "trained staff / interview guide for attended solutions",
+      "stop the process on technical problems"
+    ],
+    "verify": false
+  },
+  {
+    "id": "D2",
+    "category": "content",
+    "question": "What information should institutions collect to assess the creditworthiness of a consumer borrower?",
+    "expected_tools": [
+      "search_documents"
+    ],
+    "expected_docs": [
+      "eba_gl_2020_06"
+    ],
+    "key_points": [
+      "institutions need sufficient, accurate and up-to-date information before concluding a loan agreement (para 84)",
+      "information must be supported by necessary and appropriate evidence, covering at least a defined list of items, starting with the purpose of the loan (para 85)"
+    ],
+    "verify": false
+  },
+  {
+    "id": "D3",
+    "category": "content",
+    "question": "What must a written outsourcing agreement for a critical or important function contain under the EBA guidelines?",
+    "expected_tools": [
+      "search_documents"
+    ],
+    "expected_docs": [
+      "eba_gl_2019_02"
+    ],
+    "key_points": [
+      "minimum contents of the agreement (para 75), e.g. a clear description of the outsourced function, start and end date, notice periods",
+      "whether sub-outsourcing of critical or important functions is permitted (para 76)",
+      "if permitted, conditions for sub-outsourcing (para 78)"
+    ],
+    "verify": false
+  },
+  {
+    "id": "D4",
+    "category": "content",
+    "question": "Wann gilt ein Kunde als politisch exponierte Person und welche Pflichten folgen daraus?",
+    "expected_tools": [
+      "search_documents"
+    ],
+    "expected_docs": [
+      "bafin_aua_gwg"
+    ],
+    "key_points": [
+      "definition of PEP incl. family members and close associates (AuA 7.1)",
+      "clarifying PEP status as part of due diligence (AuA 5.4)",
+      "enhanced due diligence for PEPs"
+    ],
+    "verify": false
+  },
+  {
+    "id": "X1",
+    "category": "cross_lingual",
+    "question": "How must the front office and back office be separated in lending under German rules?",
+    "expected_tools": [
+      "search_documents"
+    ],
+    "expected_docs": [
+      "bafin_rs_06_2026"
+    ],
+    "key_points": [
+      "Markt and Marktfolge separated up to management board level (BTO 1.1 Tz. 1)",
+      "organisational separation also of Handel / Risikocontrolling (BTO Tz. 3)"
+    ],
+    "verify": false
+  },
+  {
+    "id": "X2",
+    "category": "cross_lingual",
+    "question": "Under MaRisk, which activities may a bank outsource and which risks must it manage?",
+    "expected_tools": [
+      "search_documents"
+    ],
+    "expected_docs": [
+      "bafin_rs_06_2026"
+    ],
+    "key_points": [
+      "activities and processes may in principle be outsourced (AT 9 Tz. 4)",
+      "limits for control functions (AT 9 Tz. 5)",
+      "the institution must manage the risks of outsourcing appropriately (AT 9 Tz. 9)"
+    ],
+    "verify": false
+  },
+  {
+    "id": "X3",
+    "category": "cross_lingual",
+    "question": "Welche Anforderungen gelten für die Videoidentifizierung bei der Fernkontoeröffnung?",
+    "expected_tools": [
+      "search_documents"
+    ],
+    "expected_docs": [
+      "eba_gl_2022_15"
+    ],
+    "key_points": [
+      "answer in German",
+      "liveness detection",
+      "quality and lighting of the video",
+      "trained employees / interview guide"
+    ],
+    "verify": false
+  },
+  {
+    "id": "H1",
+    "category": "chained",
+    "question": "What do AML documents issued after 2022 say about enhanced due diligence for high-risk customers?",
+    "expected_tools": [
+      "query_documents",
+      "search_documents"
+    ],
+    "expected_docs": [
+      "eba_gl_2024_01",
+      "bafin_aua_gwg"
+    ],
+    "key_points": [
+      "EBA: enhanced CDD under Article 18 for increased risk",
+      "EBA: more than one reliable independent source",
+      "BaFin: § 15 GwG reinforced due diligence, calibrated to risk",
+      "BaFin: high-risk third countries"
+    ],
+    "verify": false
+  },
+  {
+    "id": "H2",
+    "category": "chained",
+    "question": "Which document amended the EBA ML/TF Risk Factors Guidelines, and what does it say about crypto-asset service providers?",
+    "expected_tools": [
+      "query_documents",
+      "search_documents"
+    ],
+    "expected_docs": [
+      "eba_gl_2024_01"
+    ],
+    "key_points": [
+      "EBA/GL/2024/01 amends EBA/GL/2021/02",
+      "it inserts a new sectoral Guideline 21 for crypto-asset service providers (para 35)",
+      "CASPs must comply with Title I and the relevant sector-specific Title II provisions (21.2)",
+      "specific risk factors and enhanced measures where risk is increased (e.g. 21.6, 21.12)"
+    ],
+    "verify": false
+  },
+  {
+    "id": "H3",
+    "category": "chained",
+    "question": "Compare the EBA and BaFin requirements on outsourcing.",
+    "expected_tools": [
+      "query_documents",
+      "search_documents"
+    ],
+    "expected_docs": [
+      "eba_gl_2019_02",
+      "bafin_rs_06_2026"
+    ],
+    "key_points": [
+      "EBA: minimum contents of the written agreement for critical or important functions (EBA/GL/2019/02 para 75)",
+      "MaRisk: a risk analysis determines which outsourcings are material / wesentlich (AT 9 Tz. 2)",
+      "MaRisk: outsourcing of control and core banking functions only to an extent that keeps effective monitoring (AT 9 Tz. 5)",
+      "MaRisk: the institution must manage outsourcing risks and monitor the provider (AT 9 Tz. 9)",
+      "each document searched separately"
+    ],
+    "verify": false
+  },
+  {
+    "id": "N1",
+    "category": "not_in_corpus",
+    "question": "Which EBA guideline does Rundschreiben 14/2026 adopt, and what does that guideline require?",
+    "expected_tools": [
+      "query_documents"
+    ],
+    "expected_docs": [
+      "bafin_rs_14_2026"
+    ],
+    "key_points": [
+      "adopts EBA/GL/2026/01",
+      "states that the content of EBA/GL/2026/01 is NOT in the corpus",
+      "does not invent its requirements"
+    ],
+    "verify": false
+  },
+  {
+    "id": "N2",
+    "category": "not_in_corpus",
+    "question": "What does the EU AI Act require for credit scoring models?",
+    "expected_tools": [
+      "search_documents"
+    ],
+    "expected_docs": [],
+    "key_points": [
+      "states that the documents do not cover the EU AI Act",
+      "does not answer from memory"
+    ],
+    "verify": false
+  }
+]

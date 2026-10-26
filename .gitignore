@@ -1,0 +1,25 @@
+# --- secrets: never upload ---
+.env
+
+# --- Python / editor / macOS junk ---
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+
+# --- raw downloads (re-download via the URLs in data/documents.csv) ---
+data/raw_pdf/
+data/raw_html/
+data/circulars/
+
+# --- ingestion by-products (rebuildable, not used by the web app) ---
+data/cleaned/
+data/chunks_preview.txt
+data/index/embedding_cache.json
+data/index/embeddings.npy
+data/index/embeddings.fingerprint
+
+# Kept on purpose (the live app needs them): data/index/index.faiss, chunks.json,
+# index_info.json, data/documents.db, data/documents.csv, data/answer_cache.json
+# --- personal editor settings ---
+.vscode/
