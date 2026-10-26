@@ -153,7 +153,7 @@ async function ask(question) {
   const update = () => setStatus(`<div class="spinner" aria-hidden="true"></div>
     <div><strong>Thinking… ${Math.round((Date.now() - started) / 1000)} s</strong><br>
     <span class="hint">The agent is choosing tools, searching the documents and fact-checking its answer.
-    New questions usually take 15–60 seconds.</span></div>`);
+    New questions usually take 20–90 seconds.</span></div>`);
   update();
   timer = setInterval(update, 1000);
 
